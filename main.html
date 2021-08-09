@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Bootstrap Theme The Band</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    font: 400 15px/1.8 Lato, sans-serif;
+    color: #333;
+    background-color:#eeeeee;
+  }
+  h3, h4 {
+    margin: 10px 0 30px 0;
+    letter-spacing: 10px;      
+    font-size: 20px;
+    color: #111;
+  }
+  .container {
+    padding: 80px 120px;
+  }
+  .person {
+    border: 10px solid transparent;
+    margin-bottom: 25px;
+    width: 80%;
+    height: 80%;
+    opacity: 0.7;
+  }
+  .person:hover {
+    border-color: #f1f1f1;
+  }
+  .carousel-inner img {
+    -webkit-filter: grayscale(90%);
+    filter: grayscale(90%); /* make all photos black and white */ 
+    width: 100%; /* Set width to 100% */
+    margin: auto;
+  }
+  .carousel-caption h3 {
+    color: #fff !important;
+  }
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+  }
+  .bg-1 {
+    background: #2d2d30;
+    color: #bdbdbd;
+  }
+  .bg-1 h3 {color: #fff;}
+  .bg-1 p {font-style: italic;}
+  .list-group-item:first-child {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+  .list-group-item:last-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail p {
+    margin-top: 15px;
+    color: #555;
+  }
+  .btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #f1f1f1;
+    border-radius: 0;
+    transition: .2s;
+  }
+  .btn:hover, .btn:focus {
+    border: 1px solid #333;
+    background-color: #fff;
+    color: #000;
+  }
+  .modal-header, h4, .close {
+    background-color: #333;
+    color: #fff !important;
+    text-align: center;
+    font-size: 30px;
+  }
+  .modal-header, .modal-body {
+    padding: 40px 50px;
+  }
+  .nav-tabs li a {
+    color: #777;
+  }
+  #googleMap {
+    width: 100%;
+    height: 400px;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }  
+  .navbar {
+    font-family: Montserrat, sans-serif;
+    margin-bottom: 0;
+    background-color: #2d2d30;
+    border: 0;
+    font-size: 11px !important;
+    letter-spacing: 4px;
+    opacity: 0.9;
+  }
+  .navbar li a, .navbar .navbar-brand { 
+    color: #d5d5d5 !important;
+  }
+  .navbar-nav li a:hover {
+    color: #fff !important;
+  }
+  .navbar-nav li.active a {
+    color: #fff !important;
+    background-color: #29292c !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+  }
+  .open .dropdown-toggle {
+    color: #fff;
+    background-color: #555 !important;
+  }
+  .dropdown-menu li a {
+    color: #000 !important;
+  }
+  .dropdown-menu li a:hover {
+    background-color: red !important;
+  }
+  footer {
+    background-color: #2d2d30;
+    color: #f5f5f5;
+    padding: 32px;
+  }
+  footer a {
+    color: #f5f5f5;
+  }
+  footer a:hover {
+    color: #777;
+    text-decoration: none;
+  }  
+  .form-control {
+    border-radius: 0;
+  }
+  textarea {
+    resize: none;
+  }
+  #search-background{
+			position: relative;
+			display:inline-block;
+			width:100%;
+			height: 600px;
+			background-image: url(/b1.jpg);
+			background-size: cover;
+		}
+		div{
+			text-align:center;
+		}
+		.img-cover{
+			position: absolute;
+   			height: 100%;
+   			width: 100%;
+   			background-color: rgba(0, 0, 0, 0.4);
+			z-index: 1;
+		}
+		#searchval{
+			margin-top: 15px;
+			width: 500px;
+		}
+		.search-area{
+			position: absolute;
+ 			top:50%;
+     		left:50%;
+     		transform: translate(-50%, -50%); 
+			font-family: Montserrat, sans-serif;
+			display:inline-block;
+			z-index: 2;		
+		}
+		.search-area > h3{
+			color:white;
+		}
+		input[type="search"]{
+			
+			width: 100%;
+			height: 30px;
+			border: none;
+			font-size: 10pt;
+			float: left;
+			padding-left: 15px;
+			border-top-left-radius: 5px;
+			border-bottom-left-radius : 5px;
+		}
+		input[type="search"]:focus{
+			outline-style:none;
+		}
+		#searchresult{
+			width:90%;
+			margin-right:auto;
+			margin-left:auto;
+		}
+		.img-cover{
+			position: absolute;
+   			height: 100%;
+   			width: 100%;
+   			background-color: rgba(0, 0, 0, 0.4);
+			z-index: 1;
+		}
+		.container-i{
+			display:inline-block;
+			margin-top:30px;
+			width: 90%;
+			vertical-align: middle;
+			white-space: nowrap;
+			float:left;
+		}
+		.container-i a.icon{
+			display:inline-block;
+			border-top-right-radius: 5px;
+			border-bottom-right-radius: 5px;
+			background-color:white;
+			border: none;
+			height: 30px;
+			width: 50px;
+			color: #d3533c;
+			font-size: 10pt;
+			transition: all .55s ease;
+			outline:none;
+			margin-right: 10px;
+			margin-top: 15px;
+			padding-top:8px;
+		}
+		#speech_img{
+			border: none;
+			color: #d3533c;
+			font-size: 10pt;
+			transition: all .55s ease;
+			outline:none;
+			height: 50px;
+			width: 80px;
+			
+		}
+		#search-background{
+			position: relative;
+			display:inline-block;
+			width:100%;
+			height: 600px;
+			background-image: url('/b1.jpg');
+			background-size: cover;
+		}
+        #map {
+                height: 400px;
+                width: 100%;
+        }
+        #festival{
+          background-color:#eeeeee;
+        }
+  svg circle {
+    fill: #f2c55c;
+    opacity: .5;
+    stroke: white;
+  }
+  svg circle:hover {
+    fill: #2b3e4d;
+    stroke: #333;
+  }
+  svg text {
+    pointer-events: none;
+  }
+  svg .municipality {
+    fill: #777777;
+    stroke: #fff;
+    opacity: 1;
+  }
+  svg .municipality-label {
+    fill: white;
+    font-size: 12px;
+    font-weight: 300;
+    text-anchor: middle;
+  }
+  svg #map text {
+    color: #333;
+    font-size: 11px;
+    text-anchor: middle;
+  }
+  svg #places text {
+    color: #777;
+    font: 10px sans-serif;
+    text-anchor: start;
+  }
+  #title {
+    font-family: sans-serif;
+  }
+  #title p {
+    font-size: 10pt;
+  }
+  .content {
+    padding-right: 20px;
+    width: 85%;
+  }
+  .content p{
+    font-style: italic;
+  }
+  #hrFooter{
+    border:1px solid #e0e0e0;
+    border-radius:5px;
+    width:85%;
+  }
+  #result{
+
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    letter-spacing:0.9px;
+  }
+  #move_top{
+    position: fixed;
+    right: 5%;
+    bottom: 50px;
+    display: none;
+    z-index: 999;
+  }
+  .highlighted {
+    fill-opacity: 0.5;
+    stroke-opacity: 0.5;
+    stroke: #111;
+  }
+  </style>
+	<script>
+
+			function SearchResult(){
+				var search = document.getElementById("searchval").value;
+				if(search=="jeju" || search=="제주" || search=="제주도"){
+				    location.href="제주도/jeju.html";
+				
+				}
+				else if(search=="busan" || search=="부산"){
+					location.href = "부산/pusan.html";
+				}
+				else if(search=="seoul" || search=="서울"){
+					location.href = "서울/seoul.html";
+				}
+				else if(search=="suwon" || search=="수원"){
+					location.href = "수원/suwon.html";
+				}
+				else if(search=="jeonju" || search=="전주"){
+					location.href = "전주/jeonju.html";
+				}
+				else if(search=="yeosu" || search=="여수"){
+					location.href = "여수/yeosu.html";
+				}
+				else if(search=="sokcho" || search=="속초"){
+					location.href = "속초/sokcho.html";
+				}
+				else if(search=="chungju" || search=="청주"){
+					location.href = "청주/chungju.html";
+				}
+				else if(search=="gyeongju" || search=="경주"){
+					location.href = "경주/gyeongju.html";
+				}
+			}
+
+	</script>
+
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">Triporea</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#myPage">HOME</a></li>
+        <li><a href="#map">MAP</a></li>
+        <li><a href="#festival">FESTIVAL</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div id = "search">
+	<div id="search-background">
+		<div class="search-area" >
+			<h3 id = "main_text">Triporea</h3>
+				<div class="box">
+					<div class="container-i">
+						<input id="searchval" type="search" placeholder="Search..." />
+						<a class="icon" href="#empty_place" onclick="SearchResult()" ><i class="glyphicon glyphicon-search" style="color:gray;"></i></a>
+									
+					</div>
+				</div>
+			</div>
+	
+	</div>
+</div>
+
+
+
+    <!-- Left and right controls -->
+
+<div id="chart"></div>
+<!-- Container (The Band Section) -->
+
+
+<!-- Container (TOUR Section) -->
+
+  
+  <!-- Modal -->
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://d3js.org/topojson.v1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.js"></script>
+<script>
+  var width = 800,
+          height = 850;
+
+  var active = d3.select(null);
+
+  var svg = d3.select("#chart").append("svg")
+          .attr("width", width)
+          .attr("height", height);
+
+  svg.append("rect")
+          .attr("class", "background")
+          .attr("fill", "white")
+          .attr("width", width)
+          .attr("height", height)
+          .on("click", reset);
+
+  var map = svg.append("g").attr("id", "map"),
+          places = svg.append("g").attr("id", "places");
+  // placesDetails = svg.append("g").attr("id", "placesDetails");
+
+  var projection = d3.geo.mercator()
+          .center([127.4346805,36.6392137])
+          .scale(6000)
+          .translate([width/2, height/2.5]);
+
+
+  var path = d3.geo.path().projection(projection);
+
+  d3.json("chungbuk_municipalities_topo_simple.json", function(error, data) {
+    var features = topojson.feature(data, data.objects.provinces).features;
+    map.selectAll('path')
+            .data(features)
+            .enter().append('path')
+            .attr('class', function(d) { console.log(); return 'municipality c' + d.properties.code })
+            .attr('d', path)
+            .on("click", clicked)
+            .on("mouseover", function(d) {
+              d3.select(this).classed("highlighted", true)})
+
+            .on("mouseout", function(d) {
+              d3.select(this).classed("highlighted", false);
+
+
+            });
+
+
+    map.selectAll('text')
+            .data(features)
+            .enter().append("text")
+            .attr("transform", function(d) { return "translate(" + path.centroid(d) + ")"; })
+            .attr("dy", ".35em")
+            .attr("class", "municipality-label")
+            .text(function(d) { return d.properties.name; })
+  });
+
+
+
+
+  function clicked(d){
+
+    if (active.node() === this) return reset();
+    active.classed("active", false);
+    active = d3.select(this).classed("active", true);
+
+    var bounds = path.bounds(d),
+            dx = bounds[1][0] - bounds[0][0],
+            dy = bounds[1][1] - bounds[0][1],
+            x = (bounds[0][0] + bounds[1][0]) / 2,
+            y = (bounds[0][1] + bounds[1][1]) / 2,
+            scale = .7 / Math.max(dx / width, dy / height),
+            translate = [width / 2 - scale * x, height / 2 - scale * y];
+
+
+
+    if((((x+y)>=1020) && (x+y<=1040)) || x+y>=1050){
+      location.href="부산/pusan.html";
+    }
+    else if ((x+y)>=1000 && (x+y)<=1010){
+      location.href="경주/gyeongju.html";
+    }
+    else if((x+y)<1050 && (x+y)>1040){
+      location.href="제주도/jeju.html";
+    }
+    else if((x+y)<=850 && (x+y)>=800){
+      location.href="전주/jeonju.html";
+    }
+    else if((x+y)<=900 && (x+y)>850){
+      location.href="여수/yeosu.html";
+    }
+    else if((x+y)<=800 && (x+y)>=680){
+      location.href="청주/Chungju.html";
+    }
+    else if((x+y)<=670 && (x+y)>=600){
+      location.href="속초/sokcho.html";
+    }
+    else if((x+y)<=600 && (x+y)>=580){
+      location.href="수원/suwon.html";
+    }
+    else if((x+y)<=580 && (x+y)>=400){
+      location.href="서울/seoul.html";
+    }
+
+
+
+
+
+
+  }
+
+  function reset() {
+    active.classed("active", false);
+    active = d3.select(null);
+
+    map.transition()
+            .duration(750)
+            .style("stroke-width", "1.5px")
+            .attr("transform", "");
+
+    d3.selectAll(".path").classed("selected", false);
+    d3.selectAll(".path").classed("notselected", false);
+
+    places.selectAll("circle")
+            .style("visibility", "visible");
+
+
+    // placesDetails.selectAll("circle")
+    // .style("visibility", "hidden");
+    //
+  }
+
+
+
+
+
+
+</script>
+<!-- Container (Contact Section) -->
+<div id="festival" class="container text-center">
+  <div id="jeju">
+    <div class="row" >
+      <h3>전국 축제 현황 </h3>
+      <div id="sungsan" class="col-sm-4">
+        <p class="text-center"><strong>방탄소년단 팬미팅</strong></p>
+        <a href="#demo1" data-toggle="collapse">
+          <img src="img/dts.jpg" alt="Random Name" width="255" height="255">
+        </a>
+        <div id="demo1" class="collapse">
+          <p>&nbsp</p>
+          <p>날 짜 : 2019. 06 22 ~23</p>
+          <p>장 소 : 올림픽공원 체조경기장</p>
+        </div>
+      </div>
+      <div id="udo" class="col-sm-4">
+        <p class="text-center"><strong>전국 음식 축제</strong></p>
+        <a href="#demo2" data-toggle="collapse">
+          <img src="img/food.jpg" alt="Random Name" width="255" height="255">
+        </a>
+        <div id="demo2" class="collapse">
+          <p>&nbsp</p>
+          <p>날 짜 : 2019.06 01 ~23</p>
+          <p>장 소 : 전국</p>
+        </div>
+      </div>
+      <div id="supzi"class="col-sm-4">
+        <p class="text-center"><strong>부산 필름페스타</strong></p>
+        <a href="#demo3" data-toggle="collapse">
+          <img src="img/부산축제.jpg" alt="Random Name" width="255" height="255">
+        </a>
+        <div id="demo3" class="collapse">
+          <p>&nbsp</p>
+          <p>날 짜 : 2019. 06. 20 ~23 ~</p>
+          <p>장 소 : 부산 영화의전당</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a><br><br>
+  <p>T r i p o r e a</p>
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Initialize Tooltip
+  $('[data-toggle="tooltip"]').tooltip(); 
+  
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+
+
+      });
+    } // End if
+  });
+})
+var imgBack = document.getElementById("search-background");
+
+var urlImg = "b1.jpg";
+var urlText = [
+  "When you want to eat tteokbokki on an empty stomach ! ",
+  "When you want to eat fresh dessert !  ",
+  "When you want to eat light and delicious ! "
+];
+
+
+imgBack.style.backgroundImage = "url('"+ urlImg +"')";
+</script>
+ <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBAlOjojzJqN5CEy7iGWtTTiWgCMiPUhXI&callback=initMap"></script>
+</body>
+</html>

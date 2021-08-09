@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Suwon_page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/paper/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+  
+  #clock {
+    font-size: 10px;
+    color : white;
+    text-align: right;
+    font-family: 'Noto Sans KR', sans-serif;
+	}
+	
+  
+  body {
+    font: 400 15px/1.8 Lato, sans-serif;
+    color: #777;
+  }
+  h3, h4 {
+    margin: 10px 0 30px 0;
+    letter-spacing: 10px;      
+    font-size: 20px;
+    color: #111;
+
+  }
+  .container {
+    padding: 100px 180px;
+  }
+  
+  .carousel-inner img {
+   
+    width: 80%; /* Set width to 100% */
+    margin: auto;
+  }
+  .carousel-caption h3 {
+    color: #fff !important;
+  }
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+  }
+  .bg-1 {
+    background: skyblue;
+    color: #bdbdbd;
+  }
+  .bg-1 h3 {color: #fff;}
+  .bg-1 p {font-style: italic;}
+  .list-group-item:first-child {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+  .list-group-item:last-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  .navbar {
+    font-family: Montserrat, sans-serif;
+    margin-bottom: 0;
+    background-color: #2d2d30;
+    border: 0;
+    font-size: 11px !important;
+    letter-spacing: 4px;
+    opacity: 0.9;
+  }
+  .navbar li a, .navbar .navbar-brand { 
+    color: #d5d5d5 !important;
+  }
+  .navbar-nav li a:hover {
+    color: #fff !important;
+  }
+  .navbar-nav li.active a {
+    color: #fff !important;
+    background-color: #29292c !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+  }
+  .dropdown-menu li a {
+    color: #000 !important;
+  }
+  .dropdown-menu li a:hover {
+    background-color: red !important;
+  }
+  footer {
+    background-color: #2d2d30;
+    color: #f5f5f5;
+    padding: 32px;
+  }
+  footer a {
+    color: #f5f5f5;
+  }
+  footer a:hover {
+    color: #777;
+    text-decoration: none;
+  }  
+  .form-control {
+    border-radius: 0;
+  }
+  
+  </style>
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+	<div id="clock"></div>
+	<script src="clock.js"></script>
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">TRIPOREA</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#myPage">HOME</a></li>
+        <li><a href="#contact">MAKE A SCHEDULE</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">My schedule</a></li>
+            <li><a href="#">Event</a></li>
+            <li><a href="#">Add</a></li> 
+          </ul>
+        </li>
+        <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" >
+      <div class="item active">
+        <img src="Suwon1.jpg" alt="Namsan tower" width="1000" height="700">
+        <div class="carousel-caption">
+          <h3>Suwon</h3>
+         
+        </div>      
+      </div>
+
+      <div class="item">
+        <img src="Suwon2.jpg" alt="Han-river" width="1000" height="700">
+        <div class="carousel-caption">
+          <h3>Suwon</h3>
+          
+        </div>      
+      </div>
+    
+      <div class="item">
+        <img src="Suwon3.jpg" alt="Lotte word" width="1000" height="700">
+        <div class="carousel-caption">
+          <h3>Suwon</h3>
+          
+        </div>      
+      </div>
+    </div>
+	<div style="height:30px; background-color:black"></div>
+<div class="img_right">
+			
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only"></span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only"></span>
+    </a> 
+</div>
+
+</div>
+<form>
+<div id="explain" class="container text-center">
+	<iframe height="500" width="550" src="information_sw.html" name="first_iframe"> </iframe>
+   <br>
+  <br>
+</div>
+<div style="height:30px; background-color:black"></div>
+<br>
+</form>
+<div style="height:30px; background-color:black"></div>
+
+
+
+<br>
+
+<!-- Container (Contact Section) -->
+<div id="contact" >
+  <h3 class="text-center">Make Schedule</h3>
+  <p class="text-center"><em>Wellcom to Korea!</em></p>
+  <center>
+	<form action='a.jsp'>
+	
+	<div class="checkbox">
+	<center>&nbsp;&nbsp;expenses<br></center>
+		<label>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox' name='expenses' value='0~100$'/> &nbsp;&nbsp;0~100$;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox' name='expenses' value='100~200$' />&nbsp;&nbsp;100~200$;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox' name='expenses' value='200$~' />&nbsp;&nbsp;200$~ ;&nbsp;&nbsp;
+		</label>
+	</div>
+	<br>
+	<div class="checkbox">
+		&nbsp;&nbsp;Job<br>
+		<label>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox' name='job' value='office worker' />;&nbsp;&nbsp; Office worker&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox' name='job' value='Student' /> ;&nbsp;&nbsp;Student&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox' name='job' value='Unemployed' /> ;&nbsp;&nbsp;UnemployedCheck Opt 2&nbsp;&nbsp;
+		</label>
+	</div>
+	<br>
+	<div class="checkbox">
+		&nbsp;&nbsp;Season<br>
+		<label>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox' name='Season' value='Spring' />;&nbsp;&nbsp; Spring&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox' name='Season' value='Summer' />;&nbsp;&nbsp; Summer&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox' name='Season' value='Autumn' />;&nbsp;&nbsp; Autumn&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox' name='Season' value='Winter' />;&nbsp;&nbsp; Winter&nbsp;&nbsp;
+		</label>
+	</div>
+	<br>
+	<div class="checkbox">
+		&nbsp;&nbsp;The number of people<br>
+		<label>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox' name='N_people' value='Alone(1)' />;&nbsp;&nbsp; Alone(1)&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox' name='N_people' value='Not Alone(2~3)' />;&nbsp;&nbsp; Not Alone(2~3)&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox' name='N_people' value='Family (3~ )' />;&nbsp;&nbsp; Family(3~ )&nbsp;&nbsp;
+		</label>
+	</div>
+	<br>
+	<input id="in" type="button" onclick="check();" value="check">
+	</form>
+	</center>
+  <br>
+  <div id="Suwon" class="container text-center">
+  <div class="row" >
+   <strong><h3>------Suwon------</h3></strong>
+   <div id="swtour" class="col-sm-4" style="display:none;">
+      <p class="text-center"><strong>수원 투어</strong></p>
+        <img onclick="javascript:location.href='triporea.html?region=SW swtour'" src="w0.jpg" alt="Random Name" width="255" height="255" >
+		<p class="text-center">&nbsp;&nbsp;&nbsp;</p>
+    </div>
+    <div id="SW palace" class="col-sm-4" style="display:none;">
+      <p class="text-center"><strong>수원화성</strong></p>
+        <img onclick="javascript:location.href='triporea.html?region=SW palace'" src="w1.jpg" alt="Random Name" width="255" height="255" >
+		<p class="text-center">&nbsp;&nbsp;&nbsp;</p>
+    </div>
+	
+    <div id="GG hosu river" class="col-sm-4" style="display:none;">
+      <p class="text-center"><strong>광교 호수 공원</strong></p>
+        <img onclick="javascript:location.href='triporea.html?region=GG hosu river'" src="w2.jpg" alt="Random Name" width="255" height="255">
+		<p class="text-center">&nbsp;&nbsp;&nbsp;</p>
+    </div>
+	
+    <div id="Hangdong town"class="col-sm-4" style="display:none;">
+      <p class="text-center"><strong>행궁동 벽화 마을</strong></p>
+      
+        <img onclick="javascript:location.href='triporea.html?region=Hangdong town'" src="w3.jpg" alt="Random Name" width="255" height="255">
+		<p class="text-center">&nbsp;&nbsp;&nbsp;</p>
+
+    </div>
+    <div id="Suho"class="col-sm-4" style="display:none;">
+      <p class="text-center"><strong>서호 공원</strong></p>
+        <img onclick="javascript:location.href='triporea.html?region=Suho'" src="w4.jpg" alt="Random Name" width="255" height="255">
+		<p class="text-center">&nbsp;&nbsp;&nbsp;</p>
+
+    </div>
+    <div id="Bangwha" class="col-sm-4" style="display:none;">
+      <p class="text-center"><strong>방화 수류정</strong></p>
+        <img onclick="javascript:location.href='triporea.html?region=Bangwha'" src="w5.jpg" alt="Random Name" width="255" height="255">
+		<p class="text-center">&nbsp;&nbsp;&nbsp;</p>
+   
+    </div>
+    <div id="Everland"class="col-sm-4" style="display:none;">
+      <p class="text-center"><strong>에버랜드</strong></p>
+        <img onclick="javascript:location.href='triporea.html?region=Everland'" src="w6.jpg" alt="Random Name" width="255" height="255">
+		<p class="text-center">&nbsp;&nbsp;&nbsp;</p>
+     
+      
+    </div>
+  </div>
+   </div>
+</div>
+
+  
+</div>
+
+
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a><br><br>
+  <p><span class="glyphicon glyphicon-map-marker">
+  </span>Gyeongsangbuk-do Province</p>
+  <p><span class="glyphicon glyphicon-phone"></span>Phone: +00 2014041006</p>
+<p><span class="glyphicon glyphicon-envelope"></span>Email: Help@mail.com</p>  
+</footer>
+<script>
+   function check(){
+   
+      if(document.getElementsByName("expenses")[2].checked==true){
+	  	if(document.getElementsByName("N_people")[2].checked==true){
+			if(document.getElementsByName("Season")[3].checked==true){
+					document.getElementById('swtour').style.display="block";
+					document.getElementById('SW palace').style.display="block";
+					document.getElementById('GG hosu river').style.display="block";
+					document.getElementById('Hangdong town').style.display="block";
+					document.getElementById('Suho').style.display="none";
+					document.getElementById('Moosim-river').style.display="block"; 
+					document.getElementById('Everland').style.display="block";
+					}
+				
+			else if(document.getElementsByName("Season")[2].checked==true){
+				document.getElementById('swtour').style.display="none";
+				document.getElementById('SW palace').style.display="block";
+				document.getElementById('GG hosu river').style.display="block";
+				document.getElementById('Hangdong town').style.display="block";
+				document.getElementById('Suho').style.display="block";
+				document.getElementById('Bangwha').style.display="block"; 
+				document.getElementById('Everland').style.display="block";
+				}
+			else if(document.getElementsByName("Season")[1].checked==true){
+				document.getElementById('swtour').style.display="block";
+				document.getElementById('SW palace').style.display="block";
+				document.getElementById('GG hosu river').style.display="block";
+				document.getElementById('Hangdong town').style.display="block";
+				document.getElementById('Suho').style.display="none";
+				document.getElementById('Bangwha').style.display="none"; 
+				document.getElementById('Everland').style.display="block";
+				}
+			else if(document.getElementsByName("Season")[0].checked==true){
+				document.getElementById('swtour').style.display="block";
+				document.getElementById('SW palace').style.display="block";
+				document.getElementById('GG hosu river').style.display="none";
+				document.getElementById('Hangdong town').style.display="block";
+				document.getElementById('Suho').style.display="none";
+				document.getElementById('Bangwha').style.display="block"; 
+				document.getElementById('Everland').style.display="block";
+				}
+			}
+		 else if(document.getElementsByName("N_people")[1].checked==true){
+				document.getElementById('swtour').style.display="none";
+				document.getElementById('SW palace').style.display="block";
+				document.getElementById('GG hosu river').style.display="block";
+				document.getElementById('Hangdong town').style.display="block";   <!-- 순서로-->
+				document.getElementById('Suho').style.display="none";
+				document.getElementById('Bangwha').style.display="block";
+				document.getElementById('Everland').style.display="block";
+				}
+		 else if(document.getElementsByName("N_people")[0].checked==true){
+				document.getElementById('swtour').style.display="none";
+				document.getElementById('SW palace').style.display="block";
+				document.getElementById('GG hosu river').style.display="block";
+				document.getElementById('Hangdong town').style.display="block";			<!-- 순서로-->
+				document.getElementById('Suho').style.display="none";
+				document.getElementById('Bangwha').style.display="block";
+				document.getElementById('Everland').style.display="block";
+		 }
+		 
+      }
+		else if(document.getElementsByName("expenses")[1].checked==true){
+			if(document.getElementsByName("N_people")[2].checked==true){
+				if(document.getElementsByName("Season")[3].checked==true){
+					document.getElementById('swtour').style.display="block";
+					document.getElementById('SW palace').style.display="block";
+					document.getElementById('GG hosu river').style.display="block";
+					document.getElementById('Hangdong town').style.display="block";
+					document.getElementById('Suho').style.display="none";
+					document.getElementById('Bangwha').style.display="none"; 
+					document.getElementById('Everland').style.display="none";
+					}
+				
+			else if(document.getElementsByName("Season")[2].checked==true){
+				document.getElementById('swtour').style.display="none";
+				document.getElementById('SW palace').style.display="block";
+				document.getElementById('GG hosu river').style.display="block";
+				document.getElementById('Hangdong town').style.display="block";
+				document.getElementById('Suho').style.display="none";
+				document.getElementById('Bangwha').style.display="none"; 
+				document.getElementById('Everland').style.display="none";
+				}
+			else if(document.getElementsByName("Season")[1].checked==true){
+				document.getElementById('swtour').style.display="block";
+				document.getElementById('SW palace').style.display="none";
+				document.getElementById('GG hosu river').style.display="block";
+				document.getElementById('Hangdong town').style.display="block";
+				document.getElementById('Suho').style.display="none";
+				document.getElementById('Bangwha').style.display="none"; 
+				document.getElementById('Everland').style.display="none";
+				}
+			else if(document.getElementsByName("Season")[0].checked==true){
+				document.getElementById('swtour').style.display="block";
+				document.getElementById('SW palace').style.display="block";
+				document.getElementById('GG hosu river').style.display="none";
+				document.getElementById('Hangdong town').style.display="block";
+				document.getElementById('Suho').style.display="none";
+				document.getElementById('Bangwha').style.display="none"; 
+				document.getElementById('Everland').style.display="none";
+				}
+			}
+		 else if(document.getElementsByName("N_people")[1].checked==true){
+				document.getElementById('swtour').style.display="none";
+				document.getElementById('SW palace').style.display="block";
+				document.getElementById('GG hosu river').style.display="block";
+				document.getElementById('Hangdong town').style.display="block";   <!-- 순서로-->
+				document.getElementById('Suho').style.display="none";
+				document.getElementById('Bangwha').style.display="none";
+				document.getElementById('Everland').style.display="none";
+				}
+		 else if(document.getElementsByName("N_people")[0].checked==true){
+				document.getElementById('swtour').style.display="block";
+				document.getElementById('SW palace').style.display="none";
+				document.getElementById('GG hosu river').style.display="none";
+				document.getElementById('Hangdong town').style.display="block";			<!-- 순서로-->
+				document.getElementById('Suho').style.display="block";
+				document.getElementById('Bangwha').style.display="none";
+				document.getElementById('Everland').style.display="none";
+		 }
+		 
+      }
+      else if(document.getElementsByName("expenses")[0].checked==true){
+			if(document.getElementsByName("N_people")[2].checked==true){
+				if(document.getElementsByName("Season")[3].checked==true){
+					document.getElementById('swtour').style.display="none";
+					document.getElementById('SW palace').style.display="block";
+					document.getElementById('GG hosu river').style.display="block";
+					document.getElementById('Hangdong town').style.display="block";
+					document.getElementById('Suho').style.display="none";
+					document.getElementById('Bangwha').style.display="none"; 
+					document.getElementById('Everland').style.display="none";
+					}
+				
+			else if(document.getElementsByName("Season")[2].checked==true){
+				document.getElementById('swtour').style.display="none";
+				document.getElementById('SW palace').style.display="block";
+				document.getElementById('GG hosu river').style.display="block";
+				document.getElementById('Hangdong town').style.display="block";
+				document.getElementById('Suho').style.display="none";
+				document.getElementById('Bangwha').style.display="none"; 
+				document.getElementById('Everland').style.display="none";
+				}
+			else if(document.getElementsByName("Season")[1].checked==true){
+				document.getElementById('swtour').style.display="block";
+				document.getElementById('SW palace').style.display="none";
+				document.getElementById('GG hosu river').style.display="block";
+				document.getElementById('Hangdong town').style.display="none";
+				document.getElementById('Suho').style.display="none";
+				document.getElementById('Bangwha').style.display="none"; 
+				document.getElementById('Everland').style.display="none";
+				}
+			else if(document.getElementsByName("Season")[0].checked==true){
+				document.getElementById('swtour').style.display="block";
+				document.getElementById('SW palace').style.display="block";
+				document.getElementById('GG hosu river').style.display="none";
+				document.getElementById('Hangdong town').style.display="block";
+				document.getElementById('Suho').style.display="none";
+				document.getElementById('Bangwha').style.display="none"; 
+				document.getElementById('Everland').style.display="none";
+				}
+			}
+		 else if(document.getElementsByName("N_people")[1].checked==true){
+				document.getElementById('swtour').style.display="none";
+				document.getElementById('SW palace').style.display="block";
+				document.getElementById('GG hosu river').style.display="block";
+				document.getElementById('Hangdong town').style.display="none";   <!-- 순서로-->
+				document.getElementById('Suho').style.display="none";
+				document.getElementById('Bangwha').style.display="none";
+				document.getElementById('Everland').style.display="none";
+				}
+		 else if(document.getElementsByName("N_people")[0].checked==true){
+				document.getElementById('swtour').style.display="block";
+				document.getElementById('SW palace').style.display="none";
+				document.getElementById('GG hosu river').style.display="none";
+				document.getElementById('Hangdong town').style.display="block";			<!-- 순서로-->
+				document.getElementById('Suho').style.display="none";
+				document.getElementById('Bangwha').style.display="none";
+				document.getElementById('Everland').style.display="none";
+		 }
+      }
+	  
+      function list(){
+         window.open("triporea.html");
+      }
+   }
+</script>
+<script>
+$(document).ready(function(){
+  // Initialize Tooltip
+  $('[data-toggle="tooltip"]').tooltip(); 
+  
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+</script>
+
+</body>
+</html>

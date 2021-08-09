@@ -1,0 +1,3904 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Bootstrap Theme The Band</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <!-- Load c3.css -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.6.9/c3.min.css" rel="stylesheet" type="text/css">
+
+  <!-- Load d3.js and c3.js --> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js" charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.6.9/c3.min.js"></script>
+
+  <style>
+  .info{
+  margin-left:150px;
+  height:1800px;
+  clear:both;
+  }
+  .price_info1 td{
+	rowspan: 2; 
+	height: 50; 
+	width: 46;
+  }
+  .price_info2 td{
+	width: 120; 
+	height: 25; 
+	vertical-align: bottom;
+  }
+   .price_info2 b{
+		margin-left:10px;
+   }
+  .price td{
+	width: 83;
+	height: 25; 
+	vertical-align: top; 
+	color:#666666;
+  }
+  .price b{
+	margin-left:10px;
+  }
+  .menu ul {                                 /* Menu bar CSS code*/      
+				text-align: center;     
+				padding: 10px;
+			}
+  .menu ul li {
+				display: inline;
+				padding: 20px;
+			}
+   .menu ul li a {
+				text-decoration: none;
+			}
+   .menu ul li a:hover {
+				padding: 5px;
+				color: red;
+			}
+
+  body {
+    font: 400 15px/1.8 Lato, sans-serif;
+    color: #777;
+  }
+  h3, h4 {
+    margin: 10px 0 30px 0;
+    letter-spacing: 10px;      
+    font-size: 20px;
+    color: #111;
+  }
+  .container {
+    padding: 80px 120px;
+  }
+  .person {
+    border: 10px solid transparent;
+    margin-bottom: 25px;
+    width: 80%;
+    height: 80%;
+    opacity: 0.7;
+  }
+  .person:hover {
+    border-color: #f1f1f1;
+  }
+  .carousel-inner img {
+    -webkit-filter: grayscale(90%);
+    filter: grayscale(90%); /* make all photos black and white */ 
+    width: 100%; /* Set width to 100% */
+    margin: auto;
+  }
+  .carousel-caption h3 {
+    color: #fff !important;
+  }
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+  }
+  .bg-1 {
+    background: #2d2d30;
+    color: #bdbdbd;
+  }
+  .bg-1 h3 {color: #fff;}
+  .bg-1 p {font-style: italic;}
+  .list-group-item:first-child {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+  .list-group-item:last-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail p {
+    margin-top: 15px;
+    color: #555;
+  }
+  .btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #f1f1f1;
+    border-radius: 0;
+    transition: .2s;
+  }
+  .btn:hover, .btn:focus {
+    border: 1px solid #333;
+    background-color: #fff;
+    color: #000;
+  }
+  .modal-header, h4, .close {
+    background-color: #333;
+    color: #fff !important;
+    text-align: center;
+    font-size: 30px;
+  }
+  .modal-header, .modal-body {
+    padding: 40px 50px;
+  }
+  .nav-tabs li a {
+    color: #777;
+  }
+  #googleMap {
+    width: 100%;
+    height: 400px;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }  
+  .navbar {
+    font-family: Montserrat, sans-serif;
+    margin-bottom: 0;
+    background-color: #2d2d30;
+    border: 0;
+    font-size: 11px !important;
+    letter-spacing: 4px;
+    opacity: 0.9;
+  }
+  .navbar li a, .navbar .navbar-brand { 
+    color: #d5d5d5 !important;
+  }
+  .navbar-nav li a:hover {
+    color: #fff !important;
+  }
+  .navbar-nav li.active a {
+    color: #fff !important;
+    background-color: #29292c !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+  }
+  .open .dropdown-toggle {
+    color: #fff;
+    background-color: #555 !important;
+  }
+  .dropdown-menu li a {
+    color: #000 !important;
+  }
+  .dropdown-menu li a:hover {
+    background-color: red !important;
+  }
+  footer {
+    background-color: #2d2d30;
+    color: #f5f5f5;
+    padding: 32px;
+  }
+  footer a {
+    color: #f5f5f5;
+  }
+  footer a:hover {
+    color: #777;
+    text-decoration: none;
+  }  
+  .form-control {
+    border-radius: 0;
+  }
+  textarea {
+    resize: none;
+  }
+  #map, #map2, #map3,#map4{
+   width:500px;
+   height: 500px;
+   margin-right:120px;
+   clear:both;
+   position:fixed;
+   left : 600px;
+   bottom:1730px;
+  }
+  #temperatue{
+	width:500px;
+   height: 500px;
+   margin-right:120px;
+   clear:both;
+   position:fixed;
+   left : 570px;
+   bottom:1650px;
+  }
+  #like{
+   width:500px;
+   height: 400px;
+   margin-right:120px;
+   clear:both;
+   position:fixed;
+   left : 570px;
+   bottom:1550px;
+  }
+  </style>
+  <script>
+  function check(){
+	var temp = location.href.split("?");
+   var data = temp[1].split("=");
+   var region= data[1];
+   if(region == "stour"){
+		document.getElementById('stour').style.display="block";
+		document.getElementById('Hongdae').style.display="none";
+		document.getElementById('HanAuck').style.display="none";
+		document.getElementById('Nseoul tower').style.display="none";
+		document.getElementById('Banpo bridge').style.display="none";
+		document.getElementById('Gyeongbukpalace').style.display="none";
+		document.getElementById('SWpalace').style.display="none";
+		document.getElementById('GG hosu river').style.display="none";
+		document.getElementById('Hangdong town').style.display="none";
+		document.getElementById('Suho').style.display="none";
+		document.getElementById('Bangwha').style.display="none";
+		document.getElementById('Chungyunlu').style.display="none";
+		}
+	else if(region == "Hongdae"){
+		document.getElementById('stour').style.display="none";
+		document.getElementById('Hongdae').style.display="block";
+		document.getElementById('HanAuck').style.display="none";
+		document.getElementById('Nseoul tower').style.display="none";
+		document.getElementById('Banpo bridge').style.display="none";
+		document.getElementById('Gyeongbukpalace').style.display="none";
+		document.getElementById('SWpalace').style.display="none";
+		document.getElementById('GG hosu river').style.display="none";
+		document.getElementById('Hangdong town').style.display="none";
+		document.getElementById('Suho').style.display="none";
+		document.getElementById('Bangwha').style.display="none";
+		document.getElementById('Chungyunlu').style.display="none";
+	}
+		else if(region == "HanAuck"){
+		document.getElementById('stour').style.display="none";
+		document.getElementById('Hongdae').style.display="none";
+		document.getElementById('HanAuck').style.display="block";
+		document.getElementById('Nseoul tower').style.display="none";
+		document.getElementById('Banpo bridge').style.display="none";
+		document.getElementById('Gyeongbukpalace').style.display="none";
+		document.getElementById('SWpalace').style.display="none";
+		document.getElementById('GG hosu river').style.display="none";
+		document.getElementById('Hangdong town').style.display="none";
+		document.getElementById('Suho').style.display="none";
+		document.getElementById('Bangwha').style.display="none";
+		document.getElementById('Chungyunlu').style.display="none";
+	}
+		else if(region == "Nseoul tower"){
+		document.getElementById('stour').style.display="none";
+		document.getElementById('Hongdae').style.display="none";
+		document.getElementById('HanAuck').style.display="none";
+		document.getElementById('Nseoul tower').style.display="block";
+		document.getElementById('Banpo bridge').style.display="none";
+		document.getElementById('Gyeongbukpalace').style.display="none";
+		document.getElementById('SWpalace').style.display="none";
+		document.getElementById('GG hosu river').style.display="none";
+		document.getElementById('Hangdong town').style.display="none";
+		document.getElementById('Suho').style.display="none";
+		document.getElementById('Bangwha').style.display="none";
+		document.getElementById('Chungyunlu').style.display="none";
+	}
+		else if(region == "Banpo bridge"){
+		document.getElementById('stour').style.display="none";
+		document.getElementById('Hongdae').style.display="none";
+		document.getElementById('HanAuck').style.display="none";
+		document.getElementById('Nseoul tower').style.display="none";
+		document.getElementById('Banpo bridge').style.display="block";
+		document.getElementById('Gyeongbukpalace').style.display="none";
+		document.getElementById('SWpalace').style.display="none";
+		document.getElementById('GG hosu river').style.display="none";
+		document.getElementById('Hangdong town').style.display="none";
+		document.getElementById('Suho').style.display="none";
+		document.getElementById('Bangwha').style.display="none";
+		document.getElementById('Chungyunlu').style.display="none";
+	}
+		else if(region == "Gyeongbukpalace"){
+		document.getElementById('stour').style.display="none";
+		document.getElementById('Hongdae').style.display="none";
+		document.getElementById('HanAuck').style.display="none";
+		document.getElementById('Nseoul tower').style.display="none";
+		document.getElementById('Banpo bridge').style.display="none";
+		document.getElementById('Gyeongbukpalace').style.display="block";
+		document.getElementById('SWpalace').style.display="none";
+		document.getElementById('GG hosu river').style.display="none";
+		document.getElementById('Hangdong town').style.display="none";
+		document.getElementById('Suho').style.display="none";
+		document.getElementById('Bangwha').style.display="none";
+		document.getElementById('Chungyunlu').style.display="none";
+	}
+		else if(region == "SW palace"){
+		document.getElementById('stour').style.display="none";
+		document.getElementById('Hongdae').style.display="none";
+		document.getElementById('HanAuck').style.display="none";
+		document.getElementById('Nseoul tower').style.display="none";
+		document.getElementById('Banpo bridge').style.display="none";
+		document.getElementById('Gyeongbukpalace').style.display="none";
+		document.getElementById('SWpalace').style.display="block";
+		document.getElementById('GG hosu river').style.display="none";
+		document.getElementById('Hangdong town').style.display="none";
+		document.getElementById('Suho').style.display="none";
+		document.getElementById('Bangwha').style.display="none";
+		document.getElementById('Chungyunlu').style.display="none";
+	}
+		else if(region == "GG hosu river"){
+		document.getElementById('stour').style.display="none";
+		document.getElementById('Hongdae').style.display="none";
+		document.getElementById('HanAuck').style.display="none";
+		document.getElementById('Nseoul tower').style.display="none";
+		document.getElementById('Banpo bridge').style.display="none";
+		document.getElementById('Gyeongbukpalace').style.display="none";
+		document.getElementById('SWpalace').style.display="none";
+		document.getElementById('GG hosu river').style.display="block";
+		document.getElementById('Hangdong town').style.display="none";
+		document.getElementById('Suho').style.display="none";
+		document.getElementById('Bangwha').style.display="none";
+		document.getElementById('Chungyunlu').style.display="none";
+	}
+		else if(region == "Hangdong town"){
+		document.getElementById('stour').style.display="none";
+		document.getElementById('Hongdae').style.display="none";
+		document.getElementById('HanAuck').style.display="none";
+		document.getElementById('Nseoul tower').style.display="none";
+		document.getElementById('Banpo bridge').style.display="none";
+		document.getElementById('Gyeongbukpalace').style.display="none";
+		document.getElementById('SWpalace').style.display="none";
+		document.getElementById('GG hosu river').style.display="none";
+		document.getElementById('Hangdong town').style.display="block";
+		document.getElementById('Suho').style.display="none";
+		document.getElementById('Bangwha').style.display="none";
+		document.getElementById('Chungyunlu').style.display="none";
+	}
+		else if(region == "Suho"){
+		document.getElementById('stour').style.display="none";
+		document.getElementById('Hongdae').style.display="none";
+		document.getElementById('HanAuck').style.display="none";
+		document.getElementById('Nseoul tower').style.display="none";
+		document.getElementById('Banpo bridge').style.display="none";
+		document.getElementById('Gyeongbukpalace').style.display="none";
+		document.getElementById('SWpalace').style.display="none";
+		document.getElementById('GG hosu river').style.display="none";
+		document.getElementById('Hangdong town').style.display="none";
+		document.getElementById('Suho').style.display="block";
+		document.getElementById('Bangwha').style.display="none";
+		document.getElementById('Chungyunlu').style.display="none";
+	}
+		else if(region == "Bangwha"){
+		document.getElementById('stour').style.display="none";
+		document.getElementById('Hongdae').style.display="none";
+		document.getElementById('HanAuck').style.display="none";
+		document.getElementById('Nseoul tower').style.display="none";
+		document.getElementById('Banpo bridge').style.display="none";
+		document.getElementById('Gyeongbukpalace').style.display="none";
+		document.getElementById('SWpalace').style.display="none";
+		document.getElementById('GG hosu river').style.display="none";
+		document.getElementById('Hangdong town').style.display="none";
+		document.getElementById('Suho').style.display="none";
+		document.getElementById('Bangwha').style.display="block";
+		document.getElementById('Chungyunlu').style.display="none";
+	}
+		else if(region == "Chungyunlu"){
+		document.getElementById('stour').style.display="none";
+		document.getElementById('Hongdae').style.display="none";
+		document.getElementById('HanAuck').style.display="none";
+		document.getElementById('Nseoul tower').style.display="none";
+		document.getElementById('Banpo bridge').style.display="none";
+		document.getElementById('Gyeongbukpalace').style.display="none";
+		document.getElementById('SWpalace').style.display="none";
+		document.getElementById('GG hosu river').style.display="none";
+		document.getElementById('Hangdong town').style.display="none";
+		document.getElementById('Suho').style.display="none";
+		document.getElementById('Bangwha').style.display="none";
+		document.getElementById('Chungyunlu').style.display="block";
+	}
+	}
+		
+	
+  </script>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50" onload="check();">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">Triporea</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#myPage">HOME</a></li>
+        <li><a href="#Schedule">Make Schedule</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Merchandise</a></li>
+            <li><a href="#">Extras</a></li>
+            <li><a href="#">Media</a></li> 
+          </ul>
+        </li>
+        <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+      <div>
+        <p style="text-align:center;"><img src="서울/서울 1/경복궁.jpeg" width="1000" height="500"></p>   
+      </div>
+
+	<div class="menu">
+		<ul>                                               
+			<li><a href="#home">Summary</a></li>
+			<li><a href="#activity">Schedule</a></li>
+			<li><a href="#restaurant">Map</a></li>
+			<li><a href="#information">Comment</a></li>
+		</ul>
+	</div>
+<div>
+<div class="container" id="stour" style="display:none;">
+  <table cellpadding="0" cellspacing="0" border="0" style="margin-bottom:50px;">
+  <tbody>
+    <tr>
+      <td colspan="2" height="50" width="500" style="font-size:18px;vertical-align:middle;"><strong>Seoul</strong></td>
+    </tr>
+    <tr>
+      <td colspan="2" height="200" width="500" ><img src="서울/서울 1/북촌 한옥 마을.jpg" width="500" height="200" border="1" alt="" style="vertical-align:top;"></td>
+    </tr>
+    <tr>
+      <td colspan="2" height="20"></td>
+    </tr>
+    <tr style="background-color:#e5e5e5;">
+      <td style="font-size:14px; border-top:1px solid #dddddd; padding-left:10px;" width="240" height="30"><strong>Travel Budget</strong></td>
+      <td width="240" style="font-size:12px; text-align:right; border-top:1px solid #dddddd; padding-right:10px;"><span><p id="sum">KRW 0</p></span></td>
+	  <script>
+		var price = [50000, 2600, 3000, 80000, 30000, 0];
+		var total=0; 
+		for(var i=0; i<6; i++){
+			total+=price[i];
+		}		
+		document.getElementById('sum').innerHTML="KRW " + total;
+	  </script>
+    </tr>
+    <tr>
+     <td colspan="2" height="5"></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="500">
+        <table cellpadding="0" cellspacing="0" style="font-size:12px;color:#999999; background-color:white">
+			<script>
+			var r=1;
+			var w=0;
+			var q=0;
+			var total=0;
+			var price = [50000, 2600, 3000, 80000, 30000, 0];
+			var data = ['Shopping', 'Traffic', 'Ticket', 'Hotel', 'Food', 'Recration'];	
+			for(var i=1; i<5; i++){              
+				document.write("<tr>");
+				if(i%2!=0){
+					for(var j=1; j<7; j++){
+						if(j%2!=0){
+							document.write('<td class="price_info1"><img class="table_image" src="test' + r + '.png" width="36" heigh="36" style="margin-left:10px;"></td>');     
+							r++;
+						}
+						else{
+							document.write('<td class="price_info2"><b style="margin-left:10px;">' + data[q] + '</b></td>');     
+							q++;
+						}
+					}
+				}
+				else{
+					for(var j=0; j<3; j++){
+						document.write('<td></td><td class="price"><span style="margin-left:10px;">' + price[w] + ' WON</span></td>');     
+						w++;
+					}
+				}
+			}	
+			</script>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table cellpadding="0" cellspacing="0" border="0" style="margin-bottom:50px;">
+  <tbody>
+    <tr>
+      <td width="500" style="font-size: 14px;" colspan="5">
+        <b style="color: #666; margin-left: 10px;">Course</b>
+      </td>
+    </tr>
+    <tr>
+      <td width="500" height="20" colspan="5"></td>
+    </tr>
+    <tr>			
+        <td width="478"  colspan="5" style="font-size:12px;text-align:left;color:#666;border:1px solid #eee	eee; padding:10px; background-color:#e5e5e5;">
+		<script>
+			var course = ['서울 국립 고궁 박물관(Seoul National Palace Museum)', '경복궁(Gyung-Bok-Palace)', '옥인 피자(Oc-In-Pizza)', '국립 민속 박물관(National Traditional Museum)', '국제 갤러리(International Gallery)', '북촌 한옥 마을(Buchon-Korean-House-Town)'];
+			for(var i=0; i<6; i++){              
+				document.write('<span style="height:16px; line-height:16px; vertical-align:middle;"> ' + course[i] + ' </span>');
+				document.write('<span style="vertical-align:middle; display:inline-block; margin:0 5px;"><img width="4" height="8" border="0" style="vertical-align: middle;" src="2.png"></span>');
+			}
+		</script>
+      </td>
+    </tr>
+    <tr>
+      <td width="500" height="20" colspan="5"></td>
+    </tr>
+	<script>
+		var schedule = ['1. 서울 국립 고궁 박물관(Seoul National Palace Museum)', '2. 경복궁(Gyung-Bok-Palace)', '3. 옥인 피자(Oc-In-Pizza)', '4. 국립 민속 박물관(National Traditional Museum)', '5. 국제 갤러리(International Gallery)', '6. 북촌 한옥 마을(Buchon-Korean-House-Town)'];
+		var img = ['서울/서울 1/국립 고궁 박물관.JPG', '서울/서울 1/경복궁.jpeg', '서울/서울 1/옥인피자.png', '서울/서울 1/국립 민속 박물관.jpg', '서울/서울 1/국제 갤러리.jpg', '서울/서울 1/북촌 한옥 마을.jpg'];
+		var time = ['AM 09:30 -', 'AM 11:00 -', 'PM 13:00 -', 'PM 14:30 -', 'PM 16:30 -', 'PM 18:00 -'];
+		var content = ['Time : Weekday 09:00 - 18:00(Before 17:00 Enter)<br> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbspWeekend : 09:00 - 19:00(Before 18:00 Enter)<br> &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Holiday : 09:00 - 19:00(Before 18:00 Enter)<br>Ticket : Free<br>Location : Seoul Jong-ro-gu Hyo-ja-ro 12<br>Tel : 02-3701-7500',
+		               'Time : Everyday 09:00 - 18:30<br> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp(Before 17:30 Enter, Tuesday is Holiday)<br>Ticket : Adult(25~64) 3,000 Won<br>Location : Seoul Jong-ro-gu Sa-jic-ro 161<br>Tel : 02-3700-3900',
+					   'Selling Time : Weekday 11:30 - 21:00<br> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp(Break TIme 15:00 - 17:00)<br>Hot Menu : SweetPumpkin-Cheeze-Pizza 22,000 Won<br> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Alfredo-Mushroom-Pizza 22,000 Won<br>Location : Seoul jong-ro-gu Oc-in-road 26-2<br>Tel : 02-737-9944',
+					   'Time : Everyday 09:00 - 18:30(Before 17:30 Enter)<br>Ticket : Free<br>Location : Seoul Jong-ro-gu Sam-chung-ro 37<br>Tel : 02-3704-3114',
+					   'Location : Seoul Jong-ro-gu Sam-chung-ro 54<br>Tel : 02-735-8449',
+					   'Location : Seoul Jong-ro-gu Gye-dong-road 37<br>Tel : 02-2133-1372'];
+		var k = 0;
+		var r = 0;
+		var q = 0;
+		for(var i=0; i<6; i++){              
+			document.write('<tr>');
+			for(var j=0; j<4; j++){
+				if(j==0)
+				{
+					document.write('<td width="20" colspan="" style="vertical-align: bottom;"><img width="20" height="20" border="0" src="3.png"></td>');
+					document.write('<td width="480" height="20" colspan="3" style="vertical-align:top;"><span style="color:#999999;font-size:12px;line-height:20px;">' + time[k] + '</span></td></tr>');
+					k++;
+				}
+				else if(j==1)
+				{
+					document.write('<td width="10" style="border-right:1px solid #eee;"></td><td width="9"></td>');
+					document.write('<td colspan="3" height="30"><span style="overflow: hidden; text-overflow:ellipsis; width:100%; font-size:14px; color:#666666; line-height:18px; display:inline-block; margin-bottom:5px;">' + schedule[q] + '</span></td></tr>');
+					q++;
+				}
+				else if(j==2)
+				{
+					document.write('<td width="10" style="border-right:1px solid #eee;"></td><td width="9"></td>');
+					document.write('<td width="190" height="110" style="vertical-align: top;"><img width="183" height="110" border="0" src="' + img[r] + '" border="0"></td>');
+					document.write('<td width="280" style="font-size: 12px; vertical-align: top;color:#666;line-height: 18px;"><p style="margin-bottom:5px;"><b style="color:#666666;">memo</b><br><span style="color:#999999;">' + content[r] + '</span></p></td></tr>');
+					r++;
+				}
+				else
+					document.write('<td width="10" style="border-right:1px solid #eee;"></td><td width="489" height="20" colspan="4"></td></tr>');
+			}
+		}
+		</script>
+  </tbody>
+</table>
+	<div id="map"></div>
+	<script>
+		function myMap() {
+			var temp = location.href.split("?");
+			var data = temp[1].split("=");
+			var region= data[1];
+			if(region == "stour"){
+			var mapCanvas = document.getElementById("map");
+			var MyPlace = new google.maps.LatLng(37.576724, 126.975075);
+			var MyPlace1 = new google.maps.LatLng(37.579819, 126.976977);
+			var MyPlace2 = new google.maps.LatLng(37.581161, 126.967257);
+			var MyPlace3 = new google.maps.LatLng(37.581851, 126.978971);
+			var MyPlace4 = new google.maps.LatLng(37.580941, 126.980377);
+			var MyPlace5 = new google.maps.LatLng(37.582646, 126.983621);
+			var mapOptions = {
+				center: MyPlace, 
+				zoom: 15
+			};
+			var map = new google.maps.Map(mapCanvas, mapOptions);
+  
+			var contentString = '<div id="content">'+
+								'<p>서울 국립 고궁 박물관(Seoul National Palace Museum)</p>'+
+								'</div>';
+  
+			var infowindow = new google.maps.InfoWindow({
+				content: contentString
+			});
+		
+			var marker = new google.maps.Marker({
+				position:MyPlace,
+				label: '1',
+			});
+			marker.setMap(map);
+			marker.addListener('click', function() {
+				infowindow.open(map, marker);
+			});
+		
+			var contentString2 = '<div id="content">'+
+								'<p>경복궁(Gyung-Bok-Palace)</p>'+
+								'</div>';
+  
+			var infowindow2 = new google.maps.InfoWindow({
+				content: contentString2
+			});
+  
+			var marker2 = new google.maps.Marker({
+				position:MyPlace1,
+				label: '2',
+			});
+			marker2.setMap(map);
+			marker2.addListener('click', function() {
+				infowindow2.open(map, marker2);
+			});
+		
+			var contentString3 = '<div id="content">'+
+							  	 '<p>옥인 피자(Oc-In-Pizza)</p>'+
+								 '</div>';
+  
+			var infowindow3 = new google.maps.InfoWindow({
+				content: contentString3
+			});
+  
+			var marker3 = new google.maps.Marker({
+				position:MyPlace2,
+				label: '3',
+			});
+			marker3.setMap(map);
+			marker3.addListener('click', function() {
+				infowindow3.open(map, marker3);
+			});
+		
+			var contentString4 = '<div id="content">'+
+								 '<p>국립 민속 박물관(National Traditional Museum)</p>'+
+								 '</div>';
+  
+			var infowindow4 = new google.maps.InfoWindow({
+				content: contentString4
+			});
+  
+			var marker4 = new google.maps.Marker({
+				position:MyPlace3,
+				label: '4',
+			});
+			marker4.setMap(map);
+			marker4.addListener('click', function() {
+				infowindow4.open(map, marker4);
+			});
+		
+			var contentString5 = '<div id="content">'+
+								 '<p>국제 갤러리(International Gallery)</p>'+
+								 '</div>';
+  
+			var infowindow5 = new google.maps.InfoWindow({
+				content: contentString5
+			});
+  
+			var marker5 = new google.maps.Marker({
+				position:MyPlace4,
+				label: '5',
+			});
+			marker5.setMap(map);
+			marker5.addListener('click', function() {
+				infowindow5.open(map, marker5);
+			});
+		
+			var contentString6 = '<div id="content">'+
+								 '<p>북촌 한옥 마을(Buchon-Korean-House-Town)</p>'+
+								 '</div>';
+  
+			var infowindow6 = new google.maps.InfoWindow({
+				content: contentString6
+			});
+
+			var marker6 = new google.maps.Marker({
+				position:MyPlace5,
+				label: '6',
+			});
+			marker6.setMap(map);
+			marker6.addListener('click', function() {
+				infowindow6.open(map, marker6);
+			});
+  
+			var Coordinates = [
+				{lat: 37.576724, lng: 126.975075},
+				{lat: 37.579819, lng: 126.976977},
+				{lat: 37.581161, lng: 126.967257},
+				{lat: 37.581851, lng: 126.978971},
+				{lat: 37.580941, lng: 126.980377},
+				{lat: 37.582646, lng: 126.983621}
+			];
+			var Path = new google.maps.Polyline({
+				path: Coordinates,
+				geodesic: true,
+				strokeColor: '#FF0000',
+				strokeOpacity: 1.0,
+				strokeWeight: 2
+			});
+
+			Path.setMap(map);
+			}
+			else if(region == "Hongdae"){
+			var mapCanvas = document.getElementById("map2");
+			var MyPlace = new google.maps.LatLng(37.579516, 126.990920);
+			var MyPlace1 = new google.maps.LatLng(37.574753, 126.994175);
+			var MyPlace2 = new google.maps.LatLng(37.576171, 126.987006);
+			var MyPlace3 = new google.maps.LatLng(37.574564, 126.984902);
+			var MyPlace4 = new google.maps.LatLng(37.574069, 126.983571);
+			var MyPlace5 = new google.maps.LatLng(37.574593, 126.982607);
+			var mapOptions = {
+				center: MyPlace, 
+				zoom: 15
+			};
+			var map = new google.maps.Map(mapCanvas, mapOptions);
+  
+			var contentString = '<div id="content">'+
+								'<p>창덕궁(Chang-Duk-Palace)</p>'+
+								'</div>';
+  
+			var infowindow = new google.maps.InfoWindow({
+				content: contentString
+			});
+		
+			var marker = new google.maps.Marker({
+				position:MyPlace,
+				label: '1',
+			});
+			marker.setMap(map);
+			marker.addListener('click', function() {
+				infowindow.open(map, marker);
+			});
+		
+			var contentString2 = '<div id="content">'+
+								'<p>종묘(Jong-Myo)</p>'+
+								'</div>';
+  
+			var infowindow2 = new google.maps.InfoWindow({
+				content: contentString2
+			});
+  
+			var marker2 = new google.maps.Marker({
+				position:MyPlace1,
+				label: '2',
+			});
+			marker2.setMap(map);
+			marker2.addListener('click', function() {
+				infowindow2.open(map, marker2);
+			});
+		
+			var contentString3 = '<div id="content">'+
+							  	 '<p>운현궁(Wun-Hyun-Palace)</p>'+
+								 '</div>';
+  
+			var infowindow3 = new google.maps.InfoWindow({
+				content: contentString3
+			});
+  
+			var marker3 = new google.maps.Marker({
+				position:MyPlace2,
+				label: '3',
+			});
+			marker3.setMap(map);
+			marker3.addListener('click', function() {
+				infowindow3.open(map, marker3);
+			});
+		
+			var contentString4 = '<div id="content">'+
+								 '<p>인사동 쌈지길(In-Sa-Dong Ssamji-road)</p>'+
+								 '</div>';
+  
+			var infowindow4 = new google.maps.InfoWindow({
+				content: contentString4
+			});
+  
+			var marker4 = new google.maps.Marker({
+				position:MyPlace3,
+				label: '4',
+			});
+			marker4.setMap(map);
+			marker4.addListener('click', function() {
+				infowindow4.open(map, marker4);
+			});
+		
+			var contentString5 = '<div id="content">'+
+								 '<p>목인 박물관(Mok-In Museum)</p>'+
+								 '</div>';
+  
+			var infowindow5 = new google.maps.InfoWindow({
+				content: contentString5
+			});
+  
+			var marker5 = new google.maps.Marker({
+				position:MyPlace4,
+				label: '5',
+			});
+			marker5.setMap(map);
+			marker5.addListener('click', function() {
+				infowindow5.open(map, marker5);
+			});
+		
+			var contentString6 = '<div id="content">'+
+								 '<p>조계사(Jo-Gye-Sa)</p>'+
+								 '</div>';
+  
+			var infowindow6 = new google.maps.InfoWindow({
+				content: contentString6
+			});
+
+			var marker6 = new google.maps.Marker({
+				position:MyPlace5,
+				label: '6',
+			});
+			marker6.setMap(map);
+			marker6.addListener('click', function() {
+				infowindow6.open(map, marker6);
+			});
+  
+			var Coordinates = [
+				{lat: 37.579516, lng: 126.990920},
+				{lat: 37.574753, lng: 126.994175},
+				{lat: 37.576171, lng: 126.987006},
+				{lat: 37.574564, lng: 126.984902},
+				{lat: 37.574069, lng: 126.983571},
+				{lat: 37.574593, lng: 126.982607}
+			];
+			var Path = new google.maps.Polyline({
+				path: Coordinates,
+				geodesic: true,
+				strokeColor: '#FF0000',
+				strokeOpacity: 1.0,
+				strokeWeight: 2
+			});
+
+			Path.setMap(map);
+			}
+			else if(region == "HanAuck"){
+			var mapCanvas = document.getElementById("map3");
+			var MyPlace = new google.maps.LatLng(37.559408, 126.977658);
+			var MyPlace1 = new google.maps.LatLng(37.563432, 126.987317);
+			var MyPlace2 = new google.maps.LatLng(37.562755, 126.985605);
+			var MyPlace3 = new google.maps.LatLng(37.559528, 126.994483);
+			var MyPlace4 = new google.maps.LatLng(37.559528, 126.994483);
+			var mapOptions = {
+				center: MyPlace, 
+				zoom: 15
+			};
+			var map = new google.maps.Map(mapCanvas, mapOptions);
+  
+			var contentString = '<div id="content">'+
+								'<p>남대문 시장(Namdeamoon market)</p>'+
+								'</div>';
+  
+			var infowindow = new google.maps.InfoWindow({
+				content: contentString
+			});
+		
+			var marker = new google.maps.Marker({
+				position:MyPlace,
+				label: '1',
+			});
+			marker.setMap(map);
+			marker.addListener('click', function() {
+				infowindow.open(map, marker);
+			});
+		
+			var contentString2 = '<div id="content">'+
+								'<p>명동 대성당(Myung-dong Church)</p>'+
+								'</div>';
+  
+			var infowindow2 = new google.maps.InfoWindow({
+				content: contentString2
+			});
+  
+			var marker2 = new google.maps.Marker({
+				position:MyPlace1,
+				label: '2',
+			});
+			marker2.setMap(map);
+			marker2.addListener('click', function() {
+				infowindow2.open(map, marker2);
+			});
+		
+			var contentString3 = '<div id="content">'+
+							  	 '<p>명동 교자(Myungdong-Gyoja)</p>'+
+								 '</div>';
+  
+			var infowindow3 = new google.maps.InfoWindow({
+				content: contentString3
+			});
+  
+			var marker3 = new google.maps.Marker({
+				position:MyPlace2,
+				label: '3',
+			});
+			marker3.setMap(map);
+			marker3.addListener('click', function() {
+				infowindow3.open(map, marker3);
+			});
+		
+			var contentString4 = '<div id="content">'+
+								 '<p>남산골 한옥 마을(Namsangol-korean house-Town)</p>'+
+								 '</div>';
+  
+			var infowindow4 = new google.maps.InfoWindow({
+				content: contentString4
+			});
+  
+			var marker4 = new google.maps.Marker({
+				position:MyPlace3,
+				label: '4',
+			});
+			marker4.setMap(map);
+			marker4.addListener('click', function() {
+				infowindow4.open(map, marker4);
+			});
+		
+			var contentString5 = '<div id="content">'+
+								 '<p>남산 서울 타워(N-Seoul Tower)</p>'+
+								 '</div>';
+  
+			var infowindow5 = new google.maps.InfoWindow({
+				content: contentString5
+			});
+  
+			var marker5 = new google.maps.Marker({
+				position:MyPlace4,
+				label: '5',
+			});
+			marker5.setMap(map);
+			marker5.addListener('click', function() {
+				infowindow5.open(map, marker5);
+			});
+  
+			var Coordinates = [
+				{lat: 37.559408, lng: 126.977658},
+				{lat: 37.563432, lng: 126.987317},
+				{lat: 37.562755, lng: 126.985605},
+				{lat: 37.559528, lng: 126.994483},
+				{lat: 37.551425, lng: 126.988216}
+			];
+			var Path = new google.maps.Polyline({
+				path: Coordinates,
+				geodesic: true,
+				strokeColor: '#FF0000',
+				strokeOpacity: 1.0,
+				strokeWeight: 2
+			});
+
+			Path.setMap(map);
+			}
+			else if(region == "Nseoul%20tower"){
+			var mapCanvas = document.getElementById("map4");
+			var MyPlace = new google.maps.LatLng(37.515056, 127.057420);
+			var MyPlace1 = new google.maps.LatLng(37.513199, 127.058613);
+			var MyPlace2 = new google.maps.LatLng(37.520819, 127.022874);
+			var MyPlace3 = new google.maps.LatLng(37.522349, 127.020886);
+			var MyPlace4 = new google.maps.LatLng(37.515831, 126.996038);
+			var mapOptions = {
+				center: MyPlace, 
+				zoom: 15
+			};
+			var map = new google.maps.Map(mapCanvas, mapOptions);
+  
+			var contentString = '<div id="content">'+
+								'<p>봉은사(Bong-en-sa)</p>'+
+								'</div>';
+  
+			var infowindow = new google.maps.InfoWindow({
+				content: contentString
+			});
+		
+			var marker = new google.maps.Marker({
+				position:MyPlace,
+				label: '1',
+			});
+			marker.setMap(map);
+			marker.addListener('click', function() {
+				infowindow.open(map, marker);
+			});
+		
+			var contentString2 = '<div id="content">'+
+								'<p>코엑스 센터(Coex-Center)</p>'+
+								'</div>';
+  
+			var infowindow2 = new google.maps.InfoWindow({
+				content: contentString2
+			});
+  
+			var marker2 = new google.maps.Marker({
+				position:MyPlace1,
+				label: '2',
+			});
+			marker2.setMap(map);
+			marker2.addListener('click', function() {
+				infowindow2.open(map, marker2);
+			});
+		
+			var contentString3 = '<div id="content">'+
+							  	 '<p>가로수길(Garosu-road)</p>'+
+								 '</div>';
+  
+			var infowindow3 = new google.maps.InfoWindow({
+				content: contentString3
+			});
+  
+			var marker3 = new google.maps.Marker({
+				position:MyPlace2,
+				label: '3',
+			});
+			marker3.setMap(map);
+			marker3.addListener('click', function() {
+				infowindow3.open(map, marker3);
+			});
+		
+			var contentString4 = '<div id="content">'+
+								 '<p>온기정(On-Ki-Jung)</p>'+
+								 '</div>';
+  
+			var infowindow4 = new google.maps.InfoWindow({
+				content: contentString4
+			});
+  
+			var marker4 = new google.maps.Marker({
+				position:MyPlace3,
+				label: '4',
+			});
+			marker4.setMap(map);
+			marker4.addListener('click', function() {
+				infowindow4.open(map, marker4);
+			});
+		
+			var contentString5 = '<div id="content">'+
+								 '<p>반포대교(Ban-po bridge)</p>'+
+								 '</div>';
+  
+			var infowindow5 = new google.maps.InfoWindow({
+				content: contentString5
+			});
+  
+			var marker5 = new google.maps.Marker({
+				position:MyPlace4,
+				label: '5',
+			});
+			marker5.setMap(map);
+			marker5.addListener('click', function() {
+				infowindow5.open(map, marker5);
+			});
+  
+			var Coordinates = [
+				{lat: 37.515056, lng: 127.057420},
+				{lat: 37.513199, lng: 127.058613},
+				{lat: 37.520819, lng: 127.022874},
+				{lat: 37.522349, lng: 127.020886},
+				{lat: 37.515831, lng: 126.996038}
+			];
+			var Path = new google.maps.Polyline({
+				path: Coordinates,
+				geodesic: true,
+				strokeColor: '#FF0000',
+				strokeOpacity: 1.0,
+				strokeWeight: 2
+			});
+
+			Path.setMap(map);
+			}
+			else if(region == "Banpo bridge"){
+			var mapCanvas = document.getElementById("map5");
+			var MyPlace = new google.maps.LatLng(37.551745, 126.924989);
+			var MyPlace1 = new google.maps.LatLng(37.543840, 126.899616);
+			var MyPlace2 = new google.maps.LatLng(37.525692, 126.925400);
+			var MyPlace3 = new google.maps.LatLng(37.547796, 126.921102);
+			var MyPlace4 = new google.maps.LatLng(37.517555, 126.903798);
+			var mapOptions = {
+				center: MyPlace, 
+				zoom: 15
+			};
+			var map = new google.maps.Map(mapCanvas, mapOptions);
+  
+			var contentString = '<div id="content">'+
+								'<p>홍익대(Hong-Ic University)</p>'+
+								'</div>';
+  
+			var infowindow = new google.maps.InfoWindow({
+				content: contentString
+			});
+		
+			var marker = new google.maps.Marker({
+				position:MyPlace,
+				label: '1',
+			});
+			marker.setMap(map);
+			marker.addListener('click', function() {
+				infowindow.open(map, marker);
+			});
+		
+			var contentString2 = '<div id="content">'+
+								'<p>선유도 공원(Sunyoudo-Park)</p>'+
+								'</div>';
+  
+			var infowindow2 = new google.maps.InfoWindow({
+				content: contentString2
+			});
+  
+			var marker2 = new google.maps.Marker({
+				position:MyPlace1,
+				label: '2',
+			});
+			marker2.setMap(map);
+			marker2.addListener('click', function() {
+				infowindow2.open(map, marker2);
+			});
+		
+			var contentString3 = '<div id="content">'+
+							  	 '<p>IFC몰(IFCmall)</p>'+
+								 '</div>';
+  
+			var infowindow3 = new google.maps.InfoWindow({
+				content: contentString3
+			});
+  
+			var marker3 = new google.maps.Marker({
+				position:MyPlace2,
+				label: '3',
+			});
+			marker3.setMap(map);
+			marker3.addListener('click', function() {
+				infowindow3.open(map, marker3);
+			});
+		
+			var contentString4 = '<div id="content">'+
+								 '<p>홍대 만뽀(Hong-dae Man-bbo)</p>'+
+								 '</div>';
+  
+			var infowindow4 = new google.maps.InfoWindow({
+				content: contentString4
+			});
+  
+			var marker4 = new google.maps.Marker({
+				position:MyPlace3,
+				label: '4',
+			});
+			marker4.setMap(map);
+			marker4.addListener('click', function() {
+				infowindow4.open(map, marker4);
+			});
+		
+			var contentString5 = '<div id="content">'+
+								 '<p>타임 스퀘어(Time Squre)</p>'+
+								 '</div>';
+  
+			var infowindow5 = new google.maps.InfoWindow({
+				content: contentString5
+			});
+  
+			var marker5 = new google.maps.Marker({
+				position:MyPlace4,
+				label: '5',
+			});
+			marker5.setMap(map);
+			marker5.addListener('click', function() {
+				infowindow5.open(map, marker5);
+			});
+  
+			var Coordinates = [
+				{lat: 37.551745, lng: 126.924989},
+				{lat: 37.543840, lng: 126.899616},
+				{lat: 37.525692, lng: 126.925400},
+				{lat: 37.547796, lng: 126.921102},
+				{lat: 37.517555, lng: 126.903798}
+			];
+			var Path = new google.maps.Polyline({
+				path: Coordinates,
+				geodesic: true,
+				strokeColor: '#FF0000',
+				strokeOpacity: 1.0,
+				strokeWeight: 2
+			});
+
+			Path.setMap(map);
+			}
+			else if(region == "Gyeongbukpalace"){
+			var mapCanvas = document.getElementById("map6");
+			var MyPlace = new google.maps.LatLng(37.548437, 127.080837);
+			var MyPlace1 = new google.maps.LatLng(37.545207, 127.038500);
+			var MyPlace2 = new google.maps.LatLng(37.571531, 127.024649);
+			var MyPlace3 = new google.maps.LatLng(37.566955, 127.009506);
+			var MyPlace4 = new google.maps.LatLng(37.582327, 127.001881);
+			var mapOptions = {
+				center: MyPlace, 
+				zoom: 15
+			};
+			var map = new google.maps.Map(mapCanvas, mapOptions);
+  
+			var contentString = '<div id="content">'+
+								'<p>서울 어린이 대공원(Seoul Children Park)</p>'+
+								'</div>';
+  
+			var infowindow = new google.maps.InfoWindow({
+				content: contentString
+			});
+		
+			var marker = new google.maps.Marker({
+				position:MyPlace,
+				label: '1',
+			});
+			marker.setMap(map);
+			marker.addListener('click', function() {
+				infowindow.open(map, marker);
+			});
+		
+			var contentString2 = '<div id="content">'+
+								'<p>서울숲(Seoul-Park)</p>'+
+								'</div>';
+  
+			var infowindow2 = new google.maps.InfoWindow({
+				content: contentString2
+			});
+  
+			var marker2 = new google.maps.Marker({
+				position:MyPlace1,
+				label: '2',
+			});
+			marker2.setMap(map);
+			marker2.addListener('click', function() {
+				infowindow2.open(map, marker2);
+			});
+		
+			var contentString3 = '<div id="content">'+
+							  	 '<p>청계천(Chung-gye River)</p>'+
+								 '</div>';
+  
+			var infowindow3 = new google.maps.InfoWindow({
+				content: contentString3
+			});
+  
+			var marker3 = new google.maps.Marker({
+				position:MyPlace2,
+				label: '3',
+			});
+			marker3.setMap(map);
+			marker3.addListener('click', function() {
+				infowindow3.open(map, marker3);
+			});
+		
+			var contentString4 = '<div id="content">'+
+								 '<p>DDP</p>'+
+								 '</div>';
+  
+			var infowindow4 = new google.maps.InfoWindow({
+				content: contentString4
+			});
+  
+			var marker4 = new google.maps.Marker({
+				position:MyPlace3,
+				label: '4',
+			});
+			marker4.setMap(map);
+			marker4.addListener('click', function() {
+				infowindow4.open(map, marker4);
+			});
+		
+			var contentString5 = '<div id="content">'+
+								 '<p>혜화역 연극(Hye-Hwa Station Opera)</p>'+
+								 '</div>';
+  
+			var infowindow5 = new google.maps.InfoWindow({
+				content: contentString5
+			});
+  
+			var marker5 = new google.maps.Marker({
+				position:MyPlace4,
+				label: '5',
+			});
+			marker5.setMap(map);
+			marker5.addListener('click', function() {
+				infowindow5.open(map, marker5);
+			});
+  
+			var Coordinates = [
+				{lat: 37.548437, lng: 127.080837},
+				{lat: 37.545207, lng: 127.038500},
+				{lat: 37.571531, lng: 127.024649},
+				{lat: 37.566955, lng: 127.009506},
+				{lat: 37.582327, lng: 127.001881}
+			];
+			var Path = new google.maps.Polyline({
+				path: Coordinates,
+				geodesic: true,
+				strokeColor: '#FF0000',
+				strokeOpacity: 1.0,
+				strokeWeight: 2
+			});
+
+			Path.setMap(map);
+			}
+		    else if(region == "SWpalace"){
+			var mapCanvas = document.getElementById("map7");
+			var MyPlace = new google.maps.LatLng(37.285764, 127.016507);
+			var MyPlace1 = new google.maps.LatLng(37.285764, 127.016507);
+			var MyPlace2 = new google.maps.LatLng(37.293950, 127.052055);
+			var MyPlace3 = new google.maps.LatLng(37.290601, 127.050679);
+			var MyPlace4 = new google.maps.LatLng(37.261031, 127.032248);
+			var MyPlace5 = new google.maps.LatLng(37.263357, 127.033845);
+			var mapOptions = {
+				center: MyPlace, 
+				zoom: 15
+			};
+			var map = new google.maps.Map(mapCanvas, mapOptions);
+  
+			var contentString = '<div id="content">'+
+								'<p>행궁동 벽화마을(Heang-gung-dong WallPaint Town)</p>'+
+								'</div>';
+  
+			var infowindow = new google.maps.InfoWindow({
+				content: contentString
+			});
+		
+			var marker = new google.maps.Marker({
+				position:MyPlace,
+				label: '1',
+			});
+			marker.setMap(map);
+			marker.addListener('click', function() {
+				infowindow.open(map, marker);
+			});
+		
+			var contentString2 = '<div id="content">'+
+								'<p>광교 호수 공원(Gyang-Gyo Lake Park)</p>'+
+								'</div>';
+  
+			var infowindow2 = new google.maps.InfoWindow({
+				content: contentString2
+			});
+  
+			var marker2 = new google.maps.Marker({
+				position:MyPlace1,
+				label: '2',
+			});
+			marker2.setMap(map);
+			marker2.addListener('click', function() {
+				infowindow2.open(map, marker2);
+			});
+		
+			var contentString3 = '<div id="content">'+
+							  	 '<p>광교 카페 거리(Gyang-Gyo Cafe Street)</p>'+
+								 '</div>';
+  
+			var infowindow3 = new google.maps.InfoWindow({
+				content: contentString3
+			});
+  
+			var marker3 = new google.maps.Marker({
+				position:MyPlace2,
+				label: '3',
+			});
+			marker3.setMap(map);
+			marker3.addListener('click', function() {
+				infowindow3.open(map, marker3);
+			});
+		
+			var contentString4 = '<div id="content">'+
+								 '<p>아비뉴프랑 광교(Avinu Fran Gyang-Gyo)</p>'+
+								 '</div>';
+  
+			var infowindow4 = new google.maps.InfoWindow({
+				content: contentString4
+			});
+  
+			var marker4 = new google.maps.Marker({
+				position:MyPlace3,
+				label: '4',
+			});
+			marker4.setMap(map);
+			marker4.addListener('click', function() {
+				infowindow4.open(map, marker4);
+			});
+		
+			var contentString5 = '<div id="content">'+
+								 '<p>갤러리아(Galleria)</p>'+
+								 '</div>';
+  
+			var infowindow5 = new google.maps.InfoWindow({
+				content: contentString5
+			});
+  
+			var marker5 = new google.maps.Marker({
+				position:MyPlace4,
+				label: '5',
+			});
+			marker5.setMap(map);
+			marker5.addListener('click', function() {
+				infowindow5.open(map, marker5);
+			});
+		
+			var contentString6 = '<div id="content">'+
+								 '<p>나혜석 거리(Na-Hye-Suk Street)</p>'+
+								 '</div>';
+  
+			var infowindow6 = new google.maps.InfoWindow({
+				content: contentString6
+			});
+
+			var marker6 = new google.maps.Marker({
+				position:MyPlace5,
+				label: '6',
+			});
+			marker6.setMap(map);
+			marker6.addListener('click', function() {
+				infowindow6.open(map, marker6);
+			});
+  
+			var Coordinates = [
+				{lat: 37.285764, lng: 127.016507},
+				{lat: 37.285764, lng: 127.016507},
+				{lat: 37.293950, lng: 127.052055},
+				{lat: 37.290601, lng: 127.050679},
+				{lat: 37.261031, lng: 127.032248},
+				{lat: 37.263357, lng: 127.033845}
+			];
+			var Path = new google.maps.Polyline({
+				path: Coordinates,
+				geodesic: true,
+				strokeColor: '#FF0000',
+				strokeOpacity: 1.0,
+				strokeWeight: 2
+			});
+
+			Path.setMap(map);
+			}
+			else if(region == "GG hosu river"){
+			var mapCanvas = document.getElementById("map8");
+			var MyPlace = new google.maps.LatLng(37.279627, 127.009503);
+			var MyPlace1 = new google.maps.LatLng(37.250682, 126.933290);
+			var MyPlace2 = new google.maps.LatLng(37.280667, 126.990464);
+			var MyPlace3 = new google.maps.LatLng(37.284668, 127.001240);
+			var MyPlace4 = new google.maps.LatLng(37.300906, 127.001094);
+			var mapOptions = {
+				center: MyPlace, 
+				zoom: 15
+			};
+			var map = new google.maps.Map(mapCanvas, mapOptions);
+  
+			var contentString = '<div id="content">'+
+								'<p>팔달산(Pal-Dal Mountin)</p>'+
+								'</div>';
+  
+			var infowindow = new google.maps.InfoWindow({
+				content: contentString
+			});
+		
+			var marker = new google.maps.Marker({
+				position:MyPlace,
+				label: '1',
+			});
+			marker.setMap(map);
+			marker.addListener('click', function() {
+				infowindow.open(map, marker);
+			});
+		
+			var contentString2 = '<div id="content">'+
+								'<p>칠보산(Chil-bo Mountin)</p>'+
+								'</div>';
+  
+			var infowindow2 = new google.maps.InfoWindow({
+				content: contentString2
+			});
+  
+			var marker2 = new google.maps.Marker({
+				position:MyPlace1,
+				label: '2',
+			});
+			marker2.setMap(map);
+			marker2.addListener('click', function() {
+				infowindow2.open(map, marker2);
+			});
+		
+			var contentString3 = '<div id="content">'+
+							  	 '<p>서호 공원(Su-ho Park)</p>'+
+								 '</div>';
+  
+			var infowindow3 = new google.maps.InfoWindow({
+				content: contentString3
+			});
+  
+			var marker3 = new google.maps.Marker({
+				position:MyPlace2,
+				label: '3',
+			});
+			marker3.setMap(map);
+			marker3.addListener('click', function() {
+				infowindow3.open(map, marker3);
+			});
+		
+			var contentString4 = '<div id="content">'+
+								 '<p>숙지산(Suk-Ji Mountin)</p>'+
+								 '</div>';
+  
+			var infowindow4 = new google.maps.InfoWindow({
+				content: contentString4
+			});
+  
+			var marker4 = new google.maps.Marker({
+				position:MyPlace3,
+				label: '4',
+			});
+			marker4.setMap(map);
+			marker4.addListener('click', function() {
+				infowindow4.open(map, marker4);
+			});
+		
+			var contentString5 = '<div id="content">'+
+								 '<p>만석 공원(Man-Suk Park)</p>'+
+								 '</div>';
+  
+			var infowindow5 = new google.maps.InfoWindow({
+				content: contentString5
+			});
+  
+			var marker5 = new google.maps.Marker({
+				position:MyPlace4,
+				label: '5',
+			});
+			marker5.setMap(map);
+			marker5.addListener('click', function() {
+				infowindow5.open(map, marker5);
+			});
+  
+			var Coordinates = [
+				{lat: 37.279627, lng: 127.009503},
+				{lat: 37.250682, lng: 126.933290},
+				{lat: 37.280667, lng: 126.990464},
+				{lat: 37.284668, lng: 127.001240},
+				{lat: 37.300906, lng: 127.001094}
+			];
+			var Path = new google.maps.Polyline({
+				path: Coordinates,
+				geodesic: true,
+				strokeColor: '#FF0000',
+				strokeOpacity: 1.0,
+				strokeWeight: 2
+			});
+
+			Path.setMap(map);
+			}
+			else if(region == "Hangdong town"){
+			var mapCanvas = document.getElementById("map9");
+			var MyPlace = new google.maps.LatLng(37.328855, 127.014826);
+			var MyPlace1 = new google.maps.LatLng(37.287956, 127.023787);
+			var MyPlace2 = new google.maps.LatLng(37.286760, 127.036902);
+			var MyPlace3 = new google.maps.LatLng(37.283345, 127.065874);
+			var mapOptions = {
+				center: MyPlace, 
+				zoom: 15
+			};
+			var map = new google.maps.Map(mapCanvas, mapOptions);
+  
+			var contentString = '<div id="content">'+
+								'<p>광교산(Gyang-Gyo Mountin)</p>'+
+								'</div>';
+  
+			var infowindow = new google.maps.InfoWindow({
+				content: contentString
+			});
+		
+			var marker = new google.maps.Marker({
+				position:MyPlace,
+				label: '1',
+			});
+			marker.setMap(map);
+			marker.addListener('click', function() {
+				infowindow.open(map, marker);
+			});
+		
+			var contentString2 = '<div id="content">'+
+								'<p>연무대(Yeon-Mu-Dae)</p>'+
+								'</div>';
+  
+			var infowindow2 = new google.maps.InfoWindow({
+				content: contentString2
+			});
+  
+			var marker2 = new google.maps.Marker({
+				position:MyPlace1,
+				label: '2',
+			});
+			marker2.setMap(map);
+			marker2.addListener('click', function() {
+				infowindow2.open(map, marker2);
+			});
+		
+			var contentString3 = '<div id="content">'+
+							  	 '<p>수원 월드컵 경기장(Suwon WorldCup Stardium)</p>'+
+								 '</div>';
+  
+			var infowindow3 = new google.maps.InfoWindow({
+				content: contentString3
+			});
+  
+			var marker3 = new google.maps.Marker({
+				position:MyPlace2,
+				label: '3',
+			});
+			marker3.setMap(map);
+			marker3.addListener('click', function() {
+				infowindow3.open(map, marker3);
+			});
+		
+			var contentString4 = '<div id="content">'+
+								 '<p>광교 호수 공원(Gyang-Gyo Lake Park)</p>'+
+								 '</div>';
+  
+			var infowindow4 = new google.maps.InfoWindow({
+				content: contentString4
+			});
+  
+			var marker4 = new google.maps.Marker({
+				position:MyPlace3,
+				label: '4',
+			});
+			marker4.setMap(map);
+			marker4.addListener('click', function() {
+				infowindow4.open(map, marker4);
+			});
+  
+			var Coordinates = [
+				{lat: 37.328855, lng: 127.014826},
+				{lat: 37.287956, lng: 127.023787},
+				{lat: 37.286760, lng: 127.036902},
+				{lat: 37.283345, lng: 127.065874}
+			];
+			var Path = new google.maps.Polyline({
+				path: Coordinates,
+				geodesic: true,
+				strokeColor: '#FF0000',
+				strokeOpacity: 1.0,
+				strokeWeight: 2
+			});
+
+			Path.setMap(map);
+			}
+			else if(region == "Suho"){
+			var mapCanvas = document.getElementById("map10");
+			var MyPlace = new google.maps.LatLng(37.265239, 127.037635);
+			var MyPlace1 = new google.maps.LatLng(37.287839, 127.025786);
+			var MyPlace2 = new google.maps.LatLng(37.287672, 127.018096);
+			var MyPlace3 = new google.maps.LatLng(37.285025, 127.011393);
+			var MyPlace4 = new google.maps.LatLng(37.280701, 127.010190);
+			var mapOptions = {
+				center: MyPlace, 
+				zoom: 15
+			};
+			var map = new google.maps.Map(mapCanvas, mapOptions);
+  
+			var contentString = '<div id="content">'+
+								'<p>월화원(Wor-Hwa-Won)</p>'+
+								'</div>';
+  
+			var infowindow = new google.maps.InfoWindow({
+				content: contentString
+			});
+		
+			var marker = new google.maps.Marker({
+				position:MyPlace,
+				label: '1',
+			});
+			marker.setMap(map);
+			marker.addListener('click', function() {
+				infowindow.open(map, marker);
+			});
+		
+			var contentString2 = '<div id="content">'+
+								'<p>플라잉 수원(Flying Suwon)</p>'+
+								'</div>';
+  
+			var infowindow2 = new google.maps.InfoWindow({
+				content: contentString2
+			});
+  
+			var marker2 = new google.maps.Marker({
+				position:MyPlace1,
+				label: '2',
+			});
+			marker2.setMap(map);
+			marker2.addListener('click', function() {
+				infowindow2.open(map, marker2);
+			});
+		
+			var contentString3 = '<div id="content">'+
+							  	 '<p>방화 수류정(Bang-Hwa Su-Ryu-Jung)</p>'+
+								 '</div>';
+  
+			var infowindow3 = new google.maps.InfoWindow({
+				content: contentString3
+			});
+  
+			var marker3 = new google.maps.Marker({
+				position:MyPlace2,
+				label: '3',
+			});
+			marker3.setMap(map);
+			marker3.addListener('click', function() {
+				infowindow3.open(map, marker3);
+			});
+		
+			var contentString4 = '<div id="content">'+
+								 '<p>고가 커피(Go-Ga Coffee)</p>'+
+								 '</div>';
+  
+			var infowindow4 = new google.maps.InfoWindow({
+				content: contentString4
+			});
+  
+			var marker4 = new google.maps.Marker({
+				position:MyPlace3,
+				label: '4',
+			});
+			marker4.setMap(map);
+			marker4.addListener('click', function() {
+				infowindow4.open(map, marker4);
+			});
+		
+			var contentString5 = '<div id="content">'+
+								 '<p>서장대(SU-Jang-dae)</p>'+
+								 '</div>';
+  
+			var infowindow5 = new google.maps.InfoWindow({
+				content: contentString5
+			});
+  
+			var marker5 = new google.maps.Marker({
+				position:MyPlace4,
+				label: '5',
+			});
+			marker5.setMap(map);
+			marker5.addListener('click', function() {
+				infowindow5.open(map, marker5);
+			});
+  
+			var Coordinates = [
+				{lat: 37.265239, lng: 127.037635},
+				{lat: 37.287839, lng: 127.025786},
+				{lat: 37.287672, lng: 127.018096},
+				{lat: 37.285025, lng: 127.011393},
+				{lat: 37.280701, lng: 127.010190}
+			];
+			var Path = new google.maps.Polyline({
+				path: Coordinates,
+				geodesic: true,
+				strokeColor: '#FF0000',
+				strokeOpacity: 1.0,
+				strokeWeight: 2
+			});
+
+			Path.setMap(map);
+			}
+			else if(region == "Bangwha"){
+			var mapCanvas = document.getElementById("map11");
+			var MyPlace = new google.maps.LatLng(37.277847, 127.019207);
+			var MyPlace1 = new google.maps.LatLng(37.282188, 127.013659);
+			var MyPlace2 = new google.maps.LatLng(37.279482, 127.012039);
+			var MyPlace3 = new google.maps.LatLng(37.284569, 127.011553);
+			var MyPlace4 = new google.maps.LatLng(37.279771, 127.018033);
+			var MyPlace5 = new google.maps.LatLng(37.277642, 127.016735);
+			var mapOptions = {
+				center: MyPlace, 
+				zoom: 15
+			};
+			var map = new google.maps.Map(mapCanvas, mapOptions);
+  
+			var contentString = '<div id="content">'+
+								'<p>지동 시장(Ji-Dong Market)</p>'+
+								'</div>';
+  
+			var infowindow = new google.maps.InfoWindow({
+				content: contentString
+			});
+		
+			var marker = new google.maps.Marker({
+				position:MyPlace,
+				label: '1',
+			});
+			marker.setMap(map);
+			marker.addListener('click', function() {
+				infowindow.open(map, marker);
+			});
+		
+			var contentString2 = '<div id="content">'+
+								'<p>화성행궁(Hwa-Cathle Hang-Gung)</p>'+
+								'</div>';
+  
+			var infowindow2 = new google.maps.InfoWindow({
+				content: contentString2
+			});
+  
+			var marker2 = new google.maps.Marker({
+				position:MyPlace1,
+				label: '2',
+			});
+			marker2.setMap(map);
+			marker2.addListener('click', function() {
+				infowindow2.open(map, marker2);
+			});
+		
+			var contentString3 = '<div id="content">'+
+							  	 '<p>화성 산책(Hwa Cathle Walk)</p>'+
+								 '</div>';
+  
+			var infowindow3 = new google.maps.InfoWindow({
+				content: contentString3
+			});
+  
+			var marker3 = new google.maps.Marker({
+				position:MyPlace2,
+				label: '3',
+			});
+			marker3.setMap(map);
+			marker3.addListener('click', function() {
+				infowindow3.open(map, marker3);
+			});
+		
+			var contentString4 = '<div id="content">'+
+								 '<p>수원 제일 교회 노을빛 전망대(Suwon-Jeail Church Noel-Light View-Spot)</p>'+
+								 '</div>';
+  
+			var infowindow4 = new google.maps.InfoWindow({
+				content: contentString4
+			});
+  
+			var marker4 = new google.maps.Marker({
+				position:MyPlace3,
+				label: '4',
+			});
+			marker4.setMap(map);
+			marker4.addListener('click', function() {
+				infowindow4.open(map, marker4);
+			});
+		
+			var contentString5 = '<div id="content">'+
+								 '<p>통닭 골목(Chicken Street)</p>'+
+								 '</div>';
+  
+			var infowindow5 = new google.maps.InfoWindow({
+				content: contentString5
+			});
+  
+			var marker5 = new google.maps.Marker({
+				position:MyPlace4,
+				label: '5',
+			});
+			marker5.setMap(map);
+			marker5.addListener('click', function() {
+				infowindow5.open(map, marker5);
+			});
+		
+			var contentString6 = '<div id="content">'+
+								 '<p>팔달문(Pal-Dal Door)</p>'+
+								 '</div>';
+  
+			var infowindow6 = new google.maps.InfoWindow({
+				content: contentString6
+			});
+
+			var marker6 = new google.maps.Marker({
+				position:MyPlace5,
+				label: '6',
+			});
+			marker6.setMap(map);
+			marker6.addListener('click', function() {
+				infowindow6.open(map, marker6);
+			});
+  
+			var Coordinates = [
+				{lat: 37.277847, lng: 127.019207},
+				{lat: 37.282188, lng: 127.013659},
+				{lat: 37.279482, lng: 127.012039},
+				{lat: 37.284569, lng: 127.011553},
+				{lat: 37.279771, lng: 127.018033},
+				{lat: 37.277642, lng: 127.016735}
+			];
+			var Path = new google.maps.Polyline({
+				path: Coordinates,
+				geodesic: true,
+				strokeColor: '#FF0000',
+				strokeOpacity: 1.0,
+				strokeWeight: 2
+			});
+
+			Path.setMap(map);
+			}
+			else if(region == "Chungyunlu"){
+			var mapCanvas = document.getElementById("map12");
+			var MyPlace = new google.maps.LatLng(35.816405, 127.153678);
+			var MyPlace1 = new google.maps.LatLng(35.815210, 127.149971);
+			var MyPlace2 = new google.maps.LatLng(35.813547, 127.149245);
+			var MyPlace3 = new google.maps.LatLng(35.813547, 127.149245);
+			var MyPlace4 = new google.maps.LatLng(35.812744, 127.147038);
+			var mapOptions = {
+				center: MyPlace, 
+				zoom: 15
+			};
+			var map = new google.maps.Map(mapCanvas, mapOptions);
+  
+			var contentString = '<div id="content">'+
+								'<p>전주 한옥 마을(Jeonju Korean-House-Town)</p>'+
+								'</div>';
+  
+			var infowindow = new google.maps.InfoWindow({
+				content: contentString
+			});
+		
+			var marker = new google.maps.Marker({
+				position:MyPlace,
+				label: '1',
+			});
+			marker.setMap(map);
+			marker.addListener('click', function() {
+				infowindow.open(map, marker);
+			});
+		
+			var contentString2 = '<div id="content">'+
+								'<p>경기전(Kyung-ki-jeon)</p>'+
+								'</div>';
+  
+			var infowindow2 = new google.maps.InfoWindow({
+				content: contentString2
+			});
+  
+			var marker2 = new google.maps.Marker({
+				position:MyPlace1,
+				label: '2',
+			});
+			marker2.setMap(map);
+			marker2.addListener('click', function() {
+				infowindow2.open(map, marker2);
+			});
+		
+			var contentString3 = '<div id="content">'+
+							  	 '<p>전동 성당(Jeon-Dong Church)</p>'+
+								 '</div>';
+  
+			var infowindow3 = new google.maps.InfoWindow({
+				content: contentString3
+			});
+  
+			var marker3 = new google.maps.Marker({
+				position:MyPlace2,
+				label: '3',
+			});
+			marker3.setMap(map);
+			marker3.addListener('click', function() {
+				infowindow3.open(map, marker3);
+			});
+		
+			var contentString4 = '<div id="content">'+
+								 '<p>덕진 공원(Duk-Jin Park)</p>'+
+								 '</div>';
+  
+			var infowindow4 = new google.maps.InfoWindow({
+				content: contentString4
+			});
+  
+			var marker4 = new google.maps.Marker({
+				position:MyPlace3,
+				label: '4',
+			});
+			marker4.setMap(map);
+			marker4.addListener('click', function() {
+				infowindow4.open(map, marker4);
+			});
+		
+			var contentString5 = '<div id="content">'+
+								 '<p>남부 시장(Nam-Boo Market)</p>'+
+								 '</div>';
+  
+			var infowindow5 = new google.maps.InfoWindow({
+				content: contentString5
+			});
+  
+			var marker5 = new google.maps.Marker({
+				position:MyPlace4,
+				label: '5',
+			});
+			marker5.setMap(map);
+			marker5.addListener('click', function() {
+				infowindow5.open(map, marker5);
+			});
+  
+			var Coordinates = [
+				{lat: 35.816405, lng: 127.153678},
+				{lat: 35.815210, lng: 127.149971},
+				{lat: 35.813547, lng: 127.149245},
+				{lat: 35.813547, lng: 127.149245},
+				{lat: 35.812744, lng: 127.147038}
+			];
+			var Path = new google.maps.Polyline({
+				path: Coordinates,
+				geodesic: true,
+				strokeColor: '#FF0000',
+				strokeOpacity: 1.0,
+				strokeWeight: 2
+			});
+
+			Path.setMap(map);
+			}
+		}
+		</script>
+	<div id="temperatue"></div>
+	<script>
+		var chart = c3.generate({
+		 data: {
+                x: 'x',
+                columns: [
+                    ['x', '06/17', '06/18', '06/19', '06/20', '06/21', '06/22', '06/23'],
+                    ['Highest Temperature', 26, 27, 28, 29, 28, 28, 28],
+                    ['Lowest Temperature', 16, 19, 18, 18, 18, 17, 18]
+                ]
+            },
+            axis: {
+                x: {
+                    type: 'category'
+                }
+            }
+        });
+	</script>
+     
+	<div id="like"></div>
+	<script>
+		var chart = c3.generate({
+		 data: {
+                columns: [
+                    ["10's", 10],
+                    ["20's", 20],
+                    ["30's", 30],
+					["40's", 40]
+                ],
+				type: 'pie'
+            }
+        });
+	</script>
+	</div>
+	
+<div class="container" id="Hongdae" style="display:none;">
+  <table cellpadding="0" cellspacing="0" border="0" style="margin-bottom:50px;">
+  <tbody>
+    <tr>
+      <td colspan="2" height="50" width="500" style="font-size:18px;vertical-align:middle;"><strong>Seoul</strong></td>
+    </tr>
+    <tr>
+      <td colspan="2" height="200" width="500" ><img src="서울/서울 2/종묘.jpg" width="500" height="200" border="1" alt="" style="vertical-align:top;"></td>
+    </tr>
+    <tr>
+      <td colspan="2" height="20"></td>
+    </tr>
+    <tr style="background-color:#e5e5e5;">
+      <td style="font-size:14px; border-top:1px solid #dddddd; padding-left:10px;" width="240" height="30"><strong>Travel Budget</strong></td>
+      <td width="240" style="font-size:12px; text-align:right; border-top:1px solid #dddddd; padding-right:10px;"><span><p id="sum1">KRW 0</p></span></td>
+	  <script>
+		var price = [30000, 2600, 9000, 80000, 40000, 10000];
+		var total=0; 
+		for(var i=0; i<6; i++){
+			total+=price[i];
+		}		
+		document.getElementById('sum1').innerHTML="KRW " + total;
+	  </script>
+    </tr>
+    <tr>
+     <td colspan="2" height="5"></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="500">
+        <table cellpadding="0" cellspacing="0" style="font-size:12px;color:#999999; background-color:white">
+			<script>
+			var r=1;
+			var w=0;
+			var q=0;
+			var total=0;
+			var price = [30000, 2600, 9000, 80000, 40000, 10000];
+			var data = ['Shopping', 'Traffic', 'Ticket', 'Hotel', 'Food', 'Recration'];	
+			for(var i=1; i<5; i++){              
+				document.write("<tr>");
+				if(i%2!=0){
+					for(var j=1; j<7; j++){
+						if(j%2!=0){
+							document.write('<td class="price_info1"><img class="table_image" src="test' + r + '.png" width="36" heigh="36" style="margin-left:10px;"></td>');     
+							r++;
+						}
+						else{
+							document.write('<td class="price_info2"><b style="margin-left:10px;">' + data[q] + '</b></td>');     
+							q++;
+						}
+					}
+				}
+				else{
+					for(var j=0; j<3; j++){
+						document.write('<td></td><td class="price"><span style="margin-left:10px;">' + price[w] + ' WON</span></td>');     
+						w++;
+					}
+				}
+			}	
+			</script>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table cellpadding="0" cellspacing="0" border="0" style="margin-bottom:50px;">
+  <tbody>
+    <tr>
+      <td width="500" style="font-size: 14px;" colspan="5">
+        <b style="color: #666; margin-left: 10px;">Course</b>
+      </td>
+    </tr>
+    <tr>
+      <td width="500" height="20" colspan="5"></td>
+    </tr>
+    <tr>			
+        <td width="478"  colspan="5" style="font-size:12px;text-align:left;color:#666;border:1px solid #eee	eee; padding:10px; background-color:#e5e5e5;">
+		<script>
+			var course = ['창덕궁(Chang-Duk-Palace)', '종묘(Jong-Myo)', '운현궁(Wun-Hyun-Palace)', '인사동 쌈지길(In-Sa-Dong Ssamji-road)', '목인 박물관(Mok-In Museum)', '조계사(Jo-Gye-Sa)'];
+			for(var i=0; i<6; i++){              
+				document.write('<span style="height:16px; line-height:16px; vertical-align:middle;"> ' + course[i] + ' </span>');
+				document.write('<span style="vertical-align:middle; display:inline-block; margin:0 5px;"><img width="4" height="8" border="0" style="vertical-align: middle;" src="2.png"></span>');
+			}
+		</script>
+      </td>
+    </tr>
+    <tr>
+      <td width="500" height="20" colspan="5"></td>
+    </tr>
+	<script>
+		var schedule = ['1. 창덕궁(Chang-Duk-Palace)', '2. 종묘(Jong-Myo)', '3. 운현궁(Wun-Hyun-Palace)', '4. 인사동 쌈지길(In-Sa-Dong Ssamji-road)', '5. 목인 박물관(Mok-In Museum)', '6. 조계사(Jo-Gye-Sa)'];
+		var img = ['서울/서울 2/창덕궁.jpg', '서울/서울 2/종묘.jpg', '서울/서울 2/운현궁.jpg', '서울/서울 2/인사동 쌈지길.png', '서울/서울 2/목인 박물관.jpg', '서울/서울 2/조계사.jpg'];
+		var time = ['AM 09:00 -', 'AM 10:30 -', 'PM 14:00 -', 'PM 15:30 -', 'PM 17:00 -', 'PM 19:00 -'];
+		var content = ['Time : Everyday 09:00 - 18:00(Monday is Holiday)<br>Ticket : Adult 8,000 Won<br>Location : Seoul Jong-ro-gu Yul-gok-ro 99<br>Tel : 02-3668-2300',
+		               'Time : Weekday 09:30 - 16:30<br>Ticket : Adult 1,000 Won<br>Location : Seoul Jong-ro-gu Jong-ro 157<br>Tel : 02-765-0195',
+					   'Time : Everyday 09:00 - 19:00(Before 18:30 Enter, Monday is Holiday)<br>Ticket : Free<br>Location : Seoul jong-ro-gu Sam-il-dea-ro 464<br>Tel : 02-766-9090',
+					   'Time : Everyday 10:30 - 20:30<br>Ticket : Free<br>Location : Seoul Jong-ro-gu In-sa-dong-road 44<br>Tel : 02-736-0088',
+					   'Time : Everyday 10:00 - 18:00<br>Location : Seoul Jong-ro-gu Chang-ui-moon-ro 46-1<br>Tel : 02-722-5055',
+					   'Location : Seoul Jong-ro-gu Woo-jung-guk-ro 55<br>Tel : 02-768-8600'];
+		var k = 0;
+		var r = 0;
+		var q = 0;
+		for(var i=0; i<6; i++){              
+			document.write('<tr>');
+			for(var j=0; j<4; j++){
+				if(j==0)
+				{
+					document.write('<td width="20" colspan="" style="vertical-align: bottom;"><img width="20" height="20" border="0" src="3.png"></td>');
+					document.write('<td width="480" height="20" colspan="3" style="vertical-align:top;"><span style="color:#999999;font-size:12px;line-height:20px;">' + time[k] + '</span></td></tr>');
+					k++;
+				}
+				else if(j==1)
+				{
+					document.write('<td width="10" style="border-right:1px solid #eee;"></td><td width="9"></td>');
+					document.write('<td colspan="3" height="30"><span style="overflow: hidden; text-overflow:ellipsis; width:100%; font-size:14px; color:#666666; line-height:18px; display:inline-block; margin-bottom:5px;">' + schedule[q] + '</span></td></tr>');
+					q++;
+				}
+				else if(j==2)
+				{
+					document.write('<td width="10" style="border-right:1px solid #eee;"></td><td width="9"></td>');
+					document.write('<td width="190" height="110" style="vertical-align: top;"><img width="183" height="110" border="0" src="' + img[r] + '" border="0"></td>');
+					document.write('<td width="280" style="font-size: 12px; vertical-align: top;color:#666;line-height: 18px;"><p style="margin-bottom:5px;"><b style="color:#666666;">memo</b><br><span style="color:#999999;">' + content[r] + '</span></p></td></tr>');
+					r++;
+				}
+				else
+					document.write('<td width="10" style="border-right:1px solid #eee;"></td><td width="489" height="20" colspan="4"></td></tr>');
+			}
+		}
+		</script>
+  </tbody>
+</table>
+<div id="map2"></div>
+	<div id="temperatue"></div>
+	<script>
+			var chart = c3.generate({
+		 data: {
+                x: 'x',
+                columns: [
+                    ['x', '06/17', '06/18', '06/19', '06/20', '06/21', '06/22', '06/23'],
+                    ['Highest Temperature', 26, 27, 28, 29, 28, 28, 28],
+                    ['Lowest Temperature', 16, 19, 18, 18, 18, 17, 18]
+                ]
+            },
+            axis: {
+                x: {
+                    type: 'category'
+                }
+            }
+        });
+	</script>
+	<div id="like"></div>
+	<script>
+			var chart = c3.generate({
+		 data: {
+                columns: [
+                    ["10's", 10],
+                    ["20's", 15],
+                    ["30's", 30],
+					["40's", 45]
+                ],
+				type: 'pie'
+            }
+        });
+	</script>
+	</div>
+  <div class="container" id="HanAuck" style="display:none;">
+  <table cellpadding="0" cellspacing="0" border="0" style="margin-bottom:50px;">
+  <tbody>
+    <tr>
+      <td colspan="2" height="50" width="500" style="font-size:18px;vertical-align:middle;"><strong>Seoul</strong></td>
+    </tr>
+    <tr>
+      <td colspan="2" height="200" width="500" ><img src="서울/서울 3/N서울타워.jpg" width="500" height="200" border="1" alt="" style="vertical-align:top;"></td>
+    </tr>
+    <tr>
+      <td colspan="2" height="20"></td>
+    </tr>
+    <tr style="background-color:#e5e5e5;">
+      <td style="font-size:14px; border-top:1px solid #dddddd; padding-left:10px;" width="240" height="30"><strong>Travel Budget</strong></td>
+      <td width="240" style="font-size:12px; text-align:right; border-top:1px solid #dddddd; padding-right:10px;"><span><p id="sum2">KRW 0</p></span></td>
+	  <script>
+		var price = [45000, 5200, 10000, 80000, 34000, 10000];
+		var total=0; 
+		for(var i=0; i<6; i++){
+			total+=price[i];
+		}		
+		document.getElementById('sum2').innerHTML="KRW " + total;
+	  </script>
+    </tr>
+    <tr>
+     <td colspan="2" height="5"></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="500">
+        <table cellpadding="0" cellspacing="0" style="font-size:12px;color:#999999; background-color:white">
+			<script>
+			var r=1;
+			var w=0;
+			var q=0;
+			var total=0;
+			var price = [45000, 5200, 10000, 80000, 34000, 10000];
+			var data = ['Shopping', 'Traffic', 'Ticket', 'Hotel', 'Food', 'Recration'];	
+			for(var i=1; i<5; i++){              
+				document.write("<tr>");
+				if(i%2!=0){
+					for(var j=1; j<7; j++){
+						if(j%2!=0){
+							document.write('<td class="price_info1"><img class="table_image" src="test' + r + '.png" width="36" heigh="36" style="margin-left:10px;"></td>');     
+							r++;
+						}
+						else{
+							document.write('<td class="price_info2"><b style="margin-left:10px;">' + data[q] + '</b></td>');     
+							q++;
+						}
+					}
+				}
+				else{
+					for(var j=0; j<3; j++){
+						document.write('<td></td><td class="price"><span style="margin-left:10px;">' + price[w] + ' WON</span></td>');     
+						w++;
+					}
+				}
+			}	
+			</script>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table cellpadding="0" cellspacing="0" border="0" style="margin-bottom:50px;">
+  <tbody>
+    <tr>
+      <td width="500" style="font-size: 14px;" colspan="5">
+        <b style="color: #666; margin-left: 10px;">Course</b>
+      </td>
+    </tr>
+    <tr>
+      <td width="500" height="20" colspan="5"></td>
+    </tr>
+    <tr>			
+        <td width="478"  colspan="5" style="font-size:12px;text-align:left;color:#666;border:1px solid #eee	eee; padding:10px; background-color:#e5e5e5;">
+		<script>
+			var course = ['남대문 시장(Namdeamoon market)', '명동 대성당(Myung-dong Church)', '명동 교자(Myungdong-Gyoja)', '남산골 한옥 마을(Namsangol-korean house-Town)', '남산 서울 타워(N-Seoul Tower)'];
+			for(var i=0; i<5; i++){              
+				document.write('<span style="height:16px; line-height:16px; vertical-align:middle;"> ' + course[i] + ' </span>');
+				document.write('<span style="vertical-align:middle; display:inline-block; margin:0 5px;"><img width="4" height="8" border="0" style="vertical-align: middle;" src="2.png"></span>');
+			}
+		</script>
+      </td>
+    </tr>
+    <tr>
+      <td width="500" height="20" colspan="5"></td>
+    </tr>
+	<script>
+		var schedule = ['1. 남대문 시장(Namdeamoon market)', '2. 명동 대성당(Myung-dong Church)', '3. 명동 교자(Myungdong-Gyoja)', '4. 남산골 한옥 마을(Namsangol-korean house-Town)', '5. 남산 서울 타워(N-Seoul Tower)'];
+		var img = ['서울/서울 3/남대문 시장.jpg', '서울/서울 3/명당 대성당.jpg', '서울/서울 3/명동 교자.jpg', '서울/서울 3/남산골 한옥 마을.jpg', '서울/서울 3/N서울타워.jpg'];
+		var time = ['AM 09:00 -', 'AM 11:00 -', 'PM 12:30 -', 'PM 14:30 -', 'PM 17:00 -'];
+		var content = ['Time : Weekday 00:00 - 23:00(Sunday is Holiday)<br>Ticket : Free<br>Location : Seoul Jung-gu Namdeamoon-Market4road 21<br>Tel : 02-753-2805',
+		               '',
+					   'Time : Weekday 10:30 - 21:30<br>Hot Menu : Kal-Noodle 9,000 Won<br> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Mandu 10,000 Won<br>Location : Seoul jung-gu Myungdong10road 29<br>Tel : 02-776-5348',
+					   'Time : Monday is Holiday<br>Ticket : Free<br>Location : Seoul Jung-gu Twoi-Gye-ro34road 28<br>Tel : 02-2261-0517',
+					   'Time : Everyday 10:00 - 22:00<br>Ticket : Adult 10,000 Won<br>Location : Seoul Yong-San-gu Namsan-Park-road 103'];
+		var k = 0;
+		var r = 0;
+		var q = 0;
+		for(var i=0; i<5; i++){              
+			document.write('<tr>');
+			for(var j=0; j<4; j++){
+				if(j==0)
+				{
+					document.write('<td width="20" colspan="" style="vertical-align: bottom;"><img width="20" height="20" border="0" src="3.png"></td>');
+					document.write('<td width="480" height="20" colspan="3" style="vertical-align:top;"><span style="color:#999999;font-size:12px;line-height:20px;">' + time[k] + '</span></td></tr>');
+					k++;
+				}
+				else if(j==1)
+				{
+					document.write('<td width="10" style="border-right:1px solid #eee;"></td><td width="9"></td>');
+					document.write('<td colspan="3" height="30"><span style="overflow: hidden; text-overflow:ellipsis; width:100%; font-size:14px; color:#666666; line-height:18px; display:inline-block; margin-bottom:5px;">' + schedule[q] + '</span></td></tr>');
+					q++;
+				}
+				else if(j==2)
+				{
+					document.write('<td width="10" style="border-right:1px solid #eee;"></td><td width="9"></td>');
+					document.write('<td width="190" height="110" style="vertical-align: top;"><img width="183" height="110" border="0" src="' + img[r] + '" border="0"></td>');
+					document.write('<td width="280" style="font-size: 12px; vertical-align: top;color:#666;line-height: 18px;"><p style="margin-bottom:5px;"><b style="color:#666666;">memo</b><br><span style="color:#999999;">' + content[r] + '</span></p></td></tr>');
+					r++;
+				}
+				else
+					document.write('<td width="10" style="border-right:1px solid #eee;"></td><td width="489" height="20" colspan="4"></td></tr>');
+			}
+		}
+		</script>
+  </tbody>
+</table>
+<div id="map3"></div>
+	<div id="temperatue"></div>
+	<script>
+			var chart = c3.generate({
+		 data: {
+                x: 'x',
+                columns: [
+                    ['x', '06/17', '06/18', '06/19', '06/20', '06/21', '06/22', '06/23'],
+                    ['Highest Temperature', 26, 27, 28, 29, 28, 28, 28],
+                    ['Lowest Temperature', 16, 19, 18, 18, 18, 17, 18]
+                ]
+            },
+            axis: {
+                x: {
+                    type: 'category'
+                }
+            }
+        });
+	</script>
+	<div id="like"><div>
+	<script>
+			var chart = c3.generate({
+		 data: {
+                columns: [
+                    ["10's", 20],
+                    ["20's", 30],
+                    ["30's", 30],
+					["40's", 20]
+                ],
+				type: 'pie'
+            }
+        });
+	</script>
+	</div>
+</div>
+      <div class="container" id="Nseoul tower" style="display:none;">
+  <table cellpadding="0" cellspacing="0" border="0" style="margin-bottom:50px;">
+  <tbody>
+    <tr>
+      <td colspan="2" height="50" width="500" style="font-size:18px;vertical-align:middle;"><strong>Seoul</strong></td>
+    </tr>
+    <tr>
+      <td colspan="2" height="200" width="500" ><img src="서울/서울 4/반포 대교.jpg" width="500" height="200" border="1" alt="" style="vertical-align:top;"></td>
+    </tr>
+    <tr>
+      <td colspan="2" height="20"></td>
+    </tr>
+    <tr style="background-color:#e5e5e5;">
+      <td style="font-size:14px; border-top:1px solid #dddddd; padding-left:10px;" width="240" height="30"><strong>Travel Budget</strong></td>
+      <td width="240" style="font-size:12px; text-align:right; border-top:1px solid #dddddd; padding-right:10px;"><span><p id="sum3">KRW 0</p></span></td>
+	  <script>
+		var price = [55000, 10400, 0, 80000, 25000, 15000];
+		var total=0; 
+		for(var i=0; i<6; i++){
+			total+=price[i];
+		}		
+		document.getElementById('sum3').innerHTML="KRW " + total;
+	  </script>
+    </tr>
+    <tr>
+     <td colspan="2" height="5"></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="500">
+        <table cellpadding="0" cellspacing="0" style="font-size:12px;color:#999999; background-color:white">
+			<script>
+			var r=1;
+			var w=0;
+			var q=0;
+			var total=0;
+			var price = [55000, 10400, 0, 80000, 25000, 15000];
+			var data = ['Shopping', 'Traffic', 'Ticket', 'Hotel', 'Food', 'Recration'];	
+			for(var i=1; i<5; i++){              
+				document.write("<tr>");
+				if(i%2!=0){
+					for(var j=1; j<7; j++){
+						if(j%2!=0){
+							document.write('<td class="price_info1"><img class="table_image" src="test' + r + '.png" width="36" heigh="36" style="margin-left:10px;"></td>');     
+							r++;
+						}
+						else{
+							document.write('<td class="price_info2"><b style="margin-left:10px;">' + data[q] + '</b></td>');     
+							q++;
+						}
+					}
+				}
+				else{
+					for(var j=0; j<3; j++){
+						document.write('<td></td><td class="price"><span style="margin-left:10px;">' + price[w] + ' WON</span></td>');     
+						w++;
+					}
+				}
+			}	
+			</script>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table cellpadding="0" cellspacing="0" border="0" style="margin-bottom:50px;">
+  <tbody>
+    <tr>
+      <td width="500" style="font-size: 14px;" colspan="5">
+        <b style="color: #666; margin-left: 10px;">Course</b>
+      </td>
+    </tr>
+    <tr>
+      <td width="500" height="20" colspan="5"></td>
+    </tr>
+    <tr>			
+        <td width="478"  colspan="5" style="font-size:12px;text-align:left;color:#666;border:1px solid #eee	eee; padding:10px; background-color:#e5e5e5;">
+		<script>
+			var course = ['봉은사(Bong-en-sa)', '코엑스 센터(Coex-Center)', '가로수길(Garosu-road)', '온기정(On-Ki-Jung)', '반포대교(Ban-po bridge)'];
+			for(var i=0; i<5; i++){              
+				document.write('<span style="height:16px; line-height:16px; vertical-align:middle;"> ' + course[i] + ' </span>');
+				document.write('<span style="vertical-align:middle; display:inline-block; margin:0 5px;"><img width="4" height="8" border="0" style="vertical-align: middle;" src="2.png"></span>');
+			}
+		</script>
+      </td>
+    </tr>
+    <tr>
+      <td width="500" height="20" colspan="5"></td>
+    </tr>
+	<script>
+		var schedule = ['1. 봉은사(Bong-en-sa)', '2. 코엑스 센터(Coex-Center)', '3. 가로수길(Garosu-road)', '4. 온기정(On-Ki-Jung)', '5. 반포대교(Ban-po bridge)'];
+		var img = ['서울/서울 4/봉은사.jpg', '서울/서울 4/코엑스.jpg', '서울/서울 4/가로수길.jpg', '서울/서울 4/온기정.jpg', '서울/서울 4/반포 대교.jpg'];
+		var time = ['AM 10:30 -', 'AM 12:00 -', 'PM 14:30 -', 'PM 17:30 -', 'PM 20:00 -'];
+		var content = ['Location : Seoul Gang-Nam-gu Bong-en-sa-ro 531<br>Tel : 02-3218-4800',
+		               'Time : Everyday 10:00 - 18:00<br>Location : Seoul Gang-Nam-gu Young-dong-dea-ro 513<br>Tel : 02-6000-0114',
+					   'Location : Seoul Gang-Nam-gu Sin-sa-dong',
+					   'Time : Everyday 11:30 - 22:00<br>Hot Menu : Tendong 11,000 Won<br> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Bukakedong 11,000Won<br>Location : Seoul Gang-Nam-gu Apgujung-ro4road 13-9<br>Tel : 02-545-7940',
+					   ''];
+		var k = 0;
+		var r = 0;
+		var q = 0;
+		for(var i=0; i<5; i++){              
+			document.write('<tr>');
+			for(var j=0; j<4; j++){
+				if(j==0)
+				{
+					document.write('<td width="20" colspan="" style="vertical-align: bottom;"><img width="20" height="20" border="0" src="3.png"></td>');
+					document.write('<td width="480" height="20" colspan="3" style="vertical-align:top;"><span style="color:#999999;font-size:12px;line-height:20px;">' + time[k] + '</span></td></tr>');
+					k++;
+				}
+				else if(j==1)
+				{
+					document.write('<td width="10" style="border-right:1px solid #eee;"></td><td width="9"></td>');
+					document.write('<td colspan="3" height="30"><span style="overflow: hidden; text-overflow:ellipsis; width:100%; font-size:14px; color:#666666; line-height:18px; display:inline-block; margin-bottom:5px;">' + schedule[q] + '</span></td></tr>');
+					q++;
+				}
+				else if(j==2)
+				{
+					document.write('<td width="10" style="border-right:1px solid #eee;"></td><td width="9"></td>');
+					document.write('<td width="190" height="110" style="vertical-align: top;"><img width="183" height="110" border="0" src="' + img[r] + '" border="0"></td>');
+					document.write('<td width="280" style="font-size: 12px; vertical-align: top;color:#666;line-height: 18px;"><p style="margin-bottom:5px;"><b style="color:#666666;">memo</b><br><span style="color:#999999;">' + content[r] + '</span></p></td></tr>');
+					r++;
+				}
+				else
+					document.write('<td width="10" style="border-right:1px solid #eee;"></td><td width="489" height="20" colspan="4"></td></tr>');
+			}
+		}
+		</script>
+  </tbody>
+</table>
+<div id="map4"></div>
+	<div id="temperatue"></div>
+	<script>
+			var chart = c3.generate({
+		 data: {
+                x: 'x',
+                columns: [
+                    ['x', '06/17', '06/18', '06/19', '06/20', '06/21', '06/22', '06/23'],
+                    ['Highest Temperature', 26, 27, 28, 29, 28, 28, 28],
+                    ['Lowest Temperature', 16, 19, 18, 18, 18, 17, 18]
+                ]
+            },
+            axis: {
+                x: {
+                    type: 'category'
+                }
+            }
+        });
+	</script>
+	<div id="like"></div>
+	<script>
+			var chart = c3.generate({
+		 data: {
+                columns: [
+                    ["10's", 20],
+                    ["20's", 40],
+                    ["30's", 30],
+					["40's", 10]
+                ],
+				type: 'pie'
+            }
+        });
+	</script>
+	</div>
+		  <div class="info" id="Banpo bridge" style="display:none;">
+  <table cellpadding="0" cellspacing="0" border="0" style="margin-bottom:50px;">
+  <tbody>
+    <tr>
+      <td colspan="2" height="50" width="500" style="font-size:18px;vertical-align:middle;"><strong>Seoul</strong></td>
+    </tr>
+    <tr>
+      <td colspan="2" height="200" width="500" ><img src="서울/서울 5/타임 스퀘어.jpg" width="500" height="200" border="1" alt="" style="vertical-align:top;"></td>
+    </tr>
+    <tr>
+      <td colspan="2" height="20"></td>
+    </tr>
+    <tr style="background-color:#e5e5e5;">
+      <td style="font-size:14px; border-top:1px solid #dddddd; padding-left:10px;" width="240" height="30"><strong>Travel Budget</strong></td>
+      <td width="240" style="font-size:12px; text-align:right; border-top:1px solid #dddddd; padding-right:10px;"><span><p id="sum4">KRW 0</p></span></td>
+	  <script>
+		var price = [60000, 10400, 0, 80000, 20000, 15000];
+		var total=0; 
+		for(var i=0; i<6; i++){
+			total+=price[i];
+		}		
+		document.getElementById('sum4').innerHTML="KRW " + total;
+	  </script>
+    </tr>
+    <tr>
+     <td colspan="2" height="5"></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="500">
+        <table cellpadding="0" cellspacing="0" style="font-size:12px;color:#999999; background-color:white">
+			<script>
+			var r=1;
+			var w=0;
+			var q=0;
+			var total=0;
+			var price = [60000, 10400, 0, 80000, 20000, 15000];
+			var data = ['Shopping', 'Traffic', 'Ticket', 'Hotel', 'Food', 'Recration'];	
+			for(var i=1; i<5; i++){              
+				document.write("<tr>");
+				if(i%2!=0){
+					for(var j=1; j<7; j++){
+						if(j%2!=0){
+							document.write('<td class="price_info1"><img class="table_image" src="test' + r + '.png" width="36" heigh="36" style="margin-left:10px;"></td>');     
+							r++;
+						}
+						else{
+							document.write('<td class="price_info2"><b style="margin-left:10px;">' + data[q] + '</b></td>');     
+							q++;
+						}
+					}
+				}
+				else{
+					for(var j=0; j<3; j++){
+						document.write('<td></td><td class="price"><span style="margin-left:10px;">' + price[w] + ' WON</span></td>');     
+						w++;
+					}
+				}
+			}	
+			</script>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table cellpadding="0" cellspacing="0" border="0" style="margin-bottom:50px;">
+  <tbody>
+    <tr>
+      <td width="500" style="font-size: 14px;" colspan="5">
+        <b style="color: #666; margin-left: 10px;">Course</b>
+      </td>
+    </tr>
+    <tr>
+      <td width="500" height="20" colspan="5"></td>
+    </tr>
+    <tr>			
+        <td width="478"  colspan="5" style="font-size:12px;text-align:left;color:#666;border:1px solid #eee	eee; padding:10px; background-color:#e5e5e5;">
+		<script>
+			var course = ['홍익대(Hong-Ic University)', '선유도 공원(Sunyoudo-Park)', 'IFC몰(IFCmall)', '홍대 만뽀(Hong-dae Man-bbo)', '타임 스퀘어(Time Squre)'];
+			for(var i=0; i<5; i++){              
+				document.write('<span style="height:16px; line-height:16px; vertical-align:middle;"> ' + course[i] + ' </span>');
+				document.write('<span style="vertical-align:middle; display:inline-block; margin:0 5px;"><img width="4" height="8" border="0" style="vertical-align: middle;" src="2.png"></span>');
+			}
+		</script>
+      </td>
+    </tr>
+    <tr>
+      <td width="500" height="20" colspan="5"></td>
+    </tr>
+	<script>
+		var schedule = ['1. 홍익대(Hong-Ic University)', '2. 선유도 공원(Sunyoudo-Park)', '3. IFC몰(IFCmall)', '4. 홍대 만뽀(Hong-dae Man-bbo)', '5. 타임 스퀘어(Time Squre)'];
+		var img = ['서울/서울 5/홍대.jpg', '서울/서울 5/선유도 공원.jpg', '서울/서울 5/IFC몰.jpg', '서울/서울 5/홍대 만뽀.jpg', '서울/서울 5/타임 스퀘어.jpg'];
+		var time = ['AM 10:30 -', 'AM 12:00 -', 'PM 14:30 -', 'PM 17:30 -', 'PM 20:00 -'];
+		var content = ['Location : Seoul Ma-Po-gu Wow-San-ro 94<br>Tel : 02-320-1114',
+		               'Location : Seoul Young-dung-Po-gu Sun-You-ro 343<br>Tel : 02-2631-9368',
+					   'Time : Everyday 10:00 - 22:00<br>Location : Seoul Young-dung-Po-gu International Cash road 101IFCmall B1<br>Tel : 02-6137-5000',
+					   'Time : Everyday 11:30 - 21:30<br>Hot Menu : Myung ran gyu-dong 9,900 Won<br>Location : Seoul Ma-Po-gu Doc-mak-ro14road 4<br>Tel : 02-322-8979',
+					   'Time : Everyday 10:30 - 22:00<br>Location : Seoul Young-dung-Po-gu Young-jung-ro 15<br>Tel : 02-2638-2000'];
+		var k = 0;
+		var r = 0;
+		var q = 0;
+		for(var i=0; i<5; i++){              
+			document.write('<tr>');
+			for(var j=0; j<4; j++){
+				if(j==0)
+				{
+					document.write('<td width="20" colspan="" style="vertical-align: bottom;"><img width="20" height="20" border="0" src="3.png"></td>');
+					document.write('<td width="480" height="20" colspan="3" style="vertical-align:top;"><span style="color:#999999;font-size:12px;line-height:20px;">' + time[k] + '</span></td></tr>');
+					k++;
+				}
+				else if(j==1)
+				{
+					document.write('<td width="10" style="border-right:1px solid #eee;"></td><td width="9"></td>');
+					document.write('<td colspan="3" height="30"><span style="overflow: hidden; text-overflow:ellipsis; width:100%; font-size:14px; color:#666666; line-height:18px; display:inline-block; margin-bottom:5px;">' + schedule[q] + '</span></td></tr>');
+					q++;
+				}
+				else if(j==2)
+				{
+					document.write('<td width="10" style="border-right:1px solid #eee;"></td><td width="9"></td>');
+					document.write('<td width="190" height="110" style="vertical-align: top;"><img width="183" height="110" border="0" src="' + img[r] + '" border="0"></td>');
+					document.write('<td width="280" style="font-size: 12px; vertical-align: top;color:#666;line-height: 18px;"><p style="margin-bottom:5px;"><b style="color:#666666;">memo</b><br><span style="color:#999999;">' + content[r] + '</span></p></td></tr>');
+					r++;
+				}
+				else
+					document.write('<td width="10" style="border-right:1px solid #eee;"></td><td width="489" height="20" colspan="4"></td></tr>');
+			}
+		}
+		</script>
+  </tbody>
+</table>
+<div id="map5"></div>
+	<div id="temperatue"></div>
+	<script>
+			var chart = c3.generate({
+		 data: {
+                x: 'x',
+                columns: [
+                    ['x', '06/17', '06/18', '06/19', '06/20', '06/21', '06/22', '06/23'],
+                    ['Highest Temperature', 26, 27, 28, 29, 28, 28, 28],
+                    ['Lowest Temperature', 16, 19, 18, 18, 18, 17, 18]
+                ]
+            },
+            axis: {
+                x: {
+                    type: 'category'
+                }
+            }
+        });
+	</script>
+	<div id="like"></div>
+	<script>
+			var chart = c3.generate({
+		 data: {
+                columns: [
+                    ["10's", 25],
+                    ["20's", 35],
+                    ["30's", 20],
+					["40's", 20]
+                ],
+				type: 'pie'
+            }
+        });
+	</script>
+	</div>
+			  <div class="info" id="Gyeongbukpalace" style="display:none;">
+  <table cellpadding="0" cellspacing="0" border="0" style="margin-bottom:50px;">
+  <tbody>
+    <tr>
+      <td colspan="2" height="50" width="500" style="font-size:18px;vertical-align:middle;"><strong>Seoul</strong></td>
+    </tr>
+    <tr>
+      <td colspan="2" height="200" width="500" ><img src="서울/서울 6/청계천.jpg" width="500" height="200" border="1" alt="" style="vertical-align:top;"></td>
+    </tr>
+    <tr>
+      <td colspan="2" height="20"></td>
+    </tr>
+    <tr style="background-color:#e5e5e5;">
+      <td style="font-size:14px; border-top:1px solid #dddddd; padding-left:10px;" width="240" height="30"><strong>Travel Budget</strong></td>
+      <td width="240" style="font-size:12px; text-align:right; border-top:1px solid #dddddd; padding-right:10px;"><span><p id="sum5">KRW 0</p></span></td>
+	  <script>
+		var price = [80000, 13000, 10000, 80000, 35000, 15000];
+		var total=0; 
+		for(var i=0; i<6; i++){
+			total+=price[i];
+		}		
+		document.getElementById('sum5').innerHTML="KRW " + total;
+	  </script>
+    </tr>
+    <tr>
+     <td colspan="2" height="5"></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="500">
+        <table cellpadding="0" cellspacing="0" style="font-size:12px;color:#999999; background-color:white">
+			<script>
+			var r=1;
+			var w=0;
+			var q=0;
+			var total=0;
+			var price = [80000, 13000, 10000, 80000, 35000, 15000];
+			var data = ['Shopping', 'Traffic', 'Ticket', 'Hotel', 'Food', 'Recration'];	
+			for(var i=1; i<5; i++){              
+				document.write("<tr>");
+				if(i%2!=0){
+					for(var j=1; j<7; j++){
+						if(j%2!=0){
+							document.write('<td class="price_info1"><img class="table_image" src="test' + r + '.png" width="36" heigh="36" style="margin-left:10px;"></td>');     
+							r++;
+						}
+						else{
+							document.write('<td class="price_info2"><b style="margin-left:10px;">' + data[q] + '</b></td>');     
+							q++;
+						}
+					}
+				}
+				else{
+					for(var j=0; j<3; j++){
+						document.write('<td></td><td class="price"><span style="margin-left:10px;">' + price[w] + ' WON</span></td>');     
+						w++;
+					}
+				}
+			}	
+			</script>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table cellpadding="0" cellspacing="0" border="0" style="margin-bottom:50px;">
+  <tbody>
+    <tr>
+      <td width="500" style="font-size: 14px;" colspan="5">
+        <b style="color: #666; margin-left: 10px;">Course</b>
+      </td>
+    </tr>
+    <tr>
+      <td width="500" height="20" colspan="5"></td>
+    </tr>
+    <tr>			
+        <td width="478"  colspan="5" style="font-size:12px;text-align:left;color:#666;border:1px solid #eee	eee; padding:10px; background-color:#e5e5e5;">
+		<script>
+			var course = ['서울 어린이 대공원(Seoul Children Park)', '서울숲(Seoul-Park)', '청계천(Chung-gye River)', ',DDP', '혜화역 연극(Hye-Hwa Station Opera)'];
+			for(var i=0; i<5; i++){              
+				document.write('<span style="height:16px; line-height:16px; vertical-align:middle;"> ' + course[i] + ' </span>');
+				document.write('<span style="vertical-align:middle; display:inline-block; margin:0 5px;"><img width="4" height="8" border="0" style="vertical-align: middle;" src="2.png"></span>');
+			}
+		</script>
+      </td>
+    </tr>
+    <tr>
+      <td width="500" height="20" colspan="5"></td>
+    </tr>
+	<script>
+		var schedule = ['1. 서울 어린이 대공원(Seoul Children Park)', '2. 서울숲(Seoul-Park)', '3. 청계천(Chung-gye River)', '4. DDP', '5. 혜화역 연극(Hye-Hwa Station Opera)'];
+		var img = ['서울/서울 6/서울 어린이 대공원.jpg', '서울/서울 6/서울숲.jpg', '서울/서울 6/청계천.jpg', '서울/서울 6/DDP.jpg', '서울/서울 6/혜화역 연극.jpg'];
+		var time = ['AM 10:30 -', 'AM 12:00 -', 'PM 14:30 -', 'PM 17:30 -', 'PM 20:00 -'];
+		var content = ['Ticket : Free<br>Location : Seoul Gwang-Jin-gu Nung-dong-ro 216<br>Tel : 02-450-9311',
+		               'Time : Everyday 00:00 - 24:00<br>Ticket : Free<br>Location : Seoul Sung-dong-gu Dduk-sum-ro 273<br>Tel : 02-460-2905',
+					   'Location : Seoul Jong-ro-gu Chang-sin-dong<br>Tel : 02-2290-6114',
+					   'Location : Seoul Jung-gu Ul-Ji-ro 281<br>Tel : 02-2153-0000',
+					   'Ticket : 10,000 Won'];
+		var k = 0;
+		var r = 0;
+		var q = 0;
+		for(var i=0; i<5; i++){              
+			document.write('<tr>');
+			for(var j=0; j<4; j++){
+				if(j==0)
+				{
+					document.write('<td width="20" colspan="" style="vertical-align: bottom;"><img width="20" height="20" border="0" src="3.png"></td>');
+					document.write('<td width="480" height="20" colspan="3" style="vertical-align:top;"><span style="color:#999999;font-size:12px;line-height:20px;">' + time[k] + '</span></td></tr>');
+					k++;
+				}
+				else if(j==1)
+				{
+					document.write('<td width="10" style="border-right:1px solid #eee;"></td><td width="9"></td>');
+					document.write('<td colspan="3" height="30"><span style="overflow: hidden; text-overflow:ellipsis; width:100%; font-size:14px; color:#666666; line-height:18px; display:inline-block; margin-bottom:5px;">' + schedule[q] + '</span></td></tr>');
+					q++;
+				}
+				else if(j==2)
+				{
+					document.write('<td width="10" style="border-right:1px solid #eee;"></td><td width="9"></td>');
+					document.write('<td width="190" height="110" style="vertical-align: top;"><img width="183" height="110" border="0" src="' + img[r] + '" border="0"></td>');
+					document.write('<td width="280" style="font-size: 12px; vertical-align: top;color:#666;line-height: 18px;"><p style="margin-bottom:5px;"><b style="color:#666666;">memo</b><br><span style="color:#999999;">' + content[r] + '</span></p></td></tr>');
+					r++;
+				}
+				else
+					document.write('<td width="10" style="border-right:1px solid #eee;"></td><td width="489" height="20" colspan="4"></td></tr>');
+			}
+		}
+		</script>
+  </tbody>
+</table>
+<div id="map6"></div>
+	<div id="temperatue"></div>
+	<script>
+			var chart = c3.generate({
+		 data: {
+                x: 'x',
+                columns: [
+                    ['x', '06/17', '06/18', '06/19', '06/20', '06/21', '06/22', '06/23'],
+                    ['Highest Temperature', 26, 27, 28, 29, 28, 28, 28],
+                    ['Lowest Temperature', 16, 19, 18, 18, 18, 17, 18]
+                ]
+            },
+            axis: {
+                x: {
+                    type: 'category'
+                }
+            }
+        });
+	</script>
+	<div id="like"></div>
+	<script>
+			var chart = c3.generate({
+		 data: {
+                columns: [
+                    ["10's", 10],
+                    ["20's", 30],
+                    ["30's", 40],
+					["40's", 20]
+                ],
+				type: 'pie'
+            }
+        });
+	</script>
+	</div>
+	<div class="info" id="SWpalace" style="display:none;">
+  <table cellpadding="0" cellspacing="0" border="0" style="margin-bottom:50px;">
+  <tbody>
+    <tr>
+      <td colspan="2" height="50" width="500" style="font-size:18px;vertical-align:middle;"><strong>Suwon</strong></td>
+    </tr>
+    <tr>
+      <td colspan="2" height="200" width="500" ><img src="수원/수원 6/광교 호수 공원.jpg" width="500" height="200" border="1" alt="" style="vertical-align:top;"></td>
+    </tr>
+    <tr>
+      <td colspan="2" height="20"></td>
+    </tr>
+    <tr style="background-color:#e5e5e5;">
+      <td style="font-size:14px; border-top:1px solid #dddddd; padding-left:10px;" width="240" height="30"><strong>Travel Budget</strong></td>
+      <td width="240" style="font-size:12px; text-align:right; border-top:1px solid #dddddd; padding-right:10px;"><span><p id="sum6">KRW 0</p></span></td>
+	  <script>
+		var price = [20000, 2600, 0, 50000, 20000, 0];
+		var total=0; 
+		for(var i=0; i<6; i++){
+			total+=price[i];
+		}		
+		document.getElementById('sum6').innerHTML="KRW " + total;
+	  </script>
+    </tr>
+    <tr>
+     <td colspan="2" height="5"></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="500">
+        <table cellpadding="0" cellspacing="0" style="font-size:12px;color:#999999; background-color:white">
+			<script>
+			var r=1;
+			var w=0;
+			var q=0;
+			var total=0;
+			var price = [20000, 2600, 0, 50000, 20000, 0];
+			var data = ['Shopping', 'Traffic', 'Ticket', 'Hotel', 'Food', 'Recration'];	
+			for(var i=1; i<5; i++){              
+				document.write("<tr>");
+				if(i%2!=0){
+					for(var j=1; j<7; j++){
+						if(j%2!=0){
+							document.write('<td class="price_info1"><img class="table_image" src="test' + r + '.png" width="36" heigh="36" style="margin-left:10px;"></td>');     
+							r++;
+						}
+						else{
+							document.write('<td class="price_info2"><b style="margin-left:10px;">' + data[q] + '</b></td>');     
+							q++;
+						}
+					}
+				}
+				else{
+					for(var j=0; j<3; j++){
+						document.write('<td></td><td class="price"><span style="margin-left:10px;">' + price[w] + ' WON</span></td>');     
+						w++;
+					}
+				}
+			}	
+			</script>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table cellpadding="0" cellspacing="0" border="0" style="margin-bottom:50px;">
+  <tbody>
+    <tr>
+      <td width="500" style="font-size: 14px;" colspan="5">
+        <b style="color: #666; margin-left: 10px;">Course</b>
+      </td>
+    </tr>
+    <tr>
+      <td width="500" height="20" colspan="5"></td>
+    </tr>
+    <tr>			
+        <td width="478"  colspan="5" style="font-size:12px;text-align:left;color:#666;border:1px solid #eee	eee; padding:10px; background-color:#e5e5e5;">
+		<script>
+			var course = ['행궁동 벽화마을(Heang-gung-dong WallPaint Town)', '광교 호수 공원(Gyang-Gyo Lake Park)', '광교 카페 거리(Gyang-Gyo Cafe Street)', '아비뉴프랑 광교(Avinu Fran Gyang-Gyo)', '갤러리아(Galleria)', '나혜석 거리(Na-Hye-Suk Street)'];
+			for(var i=0; i<6; i++){              
+				document.write('<span style="height:16px; line-height:16px; vertical-align:middle;"> ' + course[i] + ' </span>');
+				document.write('<span style="vertical-align:middle; display:inline-block; margin:0 5px;"><img width="4" height="8" border="0" style="vertical-align: middle;" src="2.png"></span>');
+			}
+		</script>
+      </td>
+    </tr>
+    <tr>
+      <td width="500" height="20" colspan="5"></td>
+    </tr>
+	<script>
+		var schedule = ['1. 행궁동 벽화마을(Heang-gung-dong WallPaint Town)', '2. 광교 호수 공원(Gyang-Gyo Lake Park)', '3. 광교 카페 거리(Gyang-Gyo Cafe Street)', '4. 아비뉴프랑 광교(Avinu Fran Gyang-Gyo)', '5. 갤러리아(Galleria)', '6. 나혜석 거리(Na-Hye-Suk Street)'];
+		var img = ['수원/수원 6/행궁동 벽화 마을.jpg', '수원/수원 6/광교 호수 공원.jpg', '수원/수원 6/광교 카페 거리.jpg', '수원/수원 6/아비뉴프랑.jpg', '수원/수원 6/갤러리아.jpg', '수원/수원 6/나혜석 거리.jpg'];
+		var time = ['AM 09:00 -', 'AM 10:30 -', 'PM 14:00 -', 'PM 15:30 -', 'PM 17:00 -', 'PM 19:00 -'];
+		var content = ['Location : Suwon Pal-Dal-gu Buk-Su-dong<br>Tel : 031-244-4519',
+		               'Location : Suwon Young-Tong-gu Gyang-Gyo Lake-ro 57<br>Tel : 070-8800-2460',
+					   '',
+					   '',
+					   '',
+					   ''];
+		var k = 0;
+		var r = 0;
+		var q = 0;
+		for(var i=0; i<6; i++){              
+			document.write('<tr>');
+			for(var j=0; j<4; j++){
+				if(j==0)
+				{
+					document.write('<td width="20" colspan="" style="vertical-align: bottom;"><img width="20" height="20" border="0" src="3.png"></td>');
+					document.write('<td width="480" height="20" colspan="3" style="vertical-align:top;"><span style="color:#999999;font-size:12px;line-height:20px;">' + time[k] + '</span></td></tr>');
+					k++;
+				}
+				else if(j==1)
+				{
+					document.write('<td width="10" style="border-right:1px solid #eee;"></td><td width="9"></td>');
+					document.write('<td colspan="3" height="30"><span style="overflow: hidden; text-overflow:ellipsis; width:100%; font-size:14px; color:#666666; line-height:18px; display:inline-block; margin-bottom:5px;">' + schedule[q] + '</span></td></tr>');
+					q++;
+				}
+				else if(j==2)
+				{
+					document.write('<td width="10" style="border-right:1px solid #eee;"></td><td width="9"></td>');
+					document.write('<td width="190" height="110" style="vertical-align: top;"><img width="183" height="110" border="0" src="' + img[r] + '" border="0"></td>');
+					document.write('<td width="280" style="font-size: 12px; vertical-align: top;color:#666;line-height: 18px;"><p style="margin-bottom:5px;"><b style="color:#666666;">memo</b><br><span style="color:#999999;">' + content[r] + '</span></p></td></tr>');
+					r++;
+				}
+				else
+					document.write('<td width="10" style="border-right:1px solid #eee;"></td><td width="489" height="20" colspan="4"></td></tr>');
+			}
+		}
+		</script>
+  </tbody>
+</table>
+<div id="map7"></div>
+	<div id="temperatue"></div>
+	<script>
+			var chart = c3.generate({
+		 data: {
+                x: 'x',
+                columns: [
+                    ['x', '06/17', '06/18', '06/19', '06/20', '06/21', '06/22', '06/23'],
+                    ['Highest Temperature', 26, 26, 27, 28, 27, 26, 26],
+                    ['Lowest Temperature', 16, 18, 18, 18, 17, 17, 16]
+                ]
+            },
+            axis: {
+                x: {
+                    type: 'category'
+                }
+            }
+        });
+	</script>
+	<div id="like"></div>
+	<script>
+			var chart = c3.generate({
+		 data: {
+                columns: [
+                    ["10's", 5],
+                    ["20's", 30],
+                    ["30's", 40],
+					["40's", 25]
+                ],
+				type: 'pie'
+            }
+        });
+	</script>
+	</div>
+		<div class="info" id="GG hosu river" style="display:none;">
+  <table cellpadding="0" cellspacing="0" border="0" style="margin-bottom:50px;">
+  <tbody>
+    <tr>
+      <td colspan="2" height="50" width="500" style="font-size:18px;vertical-align:middle;"><strong>Suwon</strong></td>
+    </tr>
+    <tr>
+      <td colspan="2" height="200" width="500" ><img src="수원/수원 5/서호 공원.jpg" width="500" height="200" border="1" alt="" style="vertical-align:top;"></td>
+    </tr>
+    <tr>
+      <td colspan="2" height="20"></td>
+    </tr>
+    <tr style="background-color:#e5e5e5;">
+      <td style="font-size:14px; border-top:1px solid #dddddd; padding-left:10px;" width="240" height="30"><strong>Travel Budget</strong></td>
+      <td width="240" style="font-size:12px; text-align:right; border-top:1px solid #dddddd; padding-right:10px;"><span><p id="sum7">KRW 0</p></span></td>
+	  <script>
+		var price = [30000, 13000, 0, 60000, 25000, 0];
+		var total=0; 
+		for(var i=0; i<6; i++){
+			total+=price[i];
+		}		
+		document.getElementById('sum7').innerHTML="KRW " + total;
+	  </script>
+    </tr>
+    <tr>
+     <td colspan="2" height="5"></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="500">
+        <table cellpadding="0" cellspacing="0" style="font-size:12px;color:#999999; background-color:white">
+			<script>
+			var r=1;
+			var w=0;
+			var q=0;
+			var total=0;
+			var price = [30000, 13000, 0, 60000, 25000, 0];
+			var data = ['Shopping', 'Traffic', 'Ticket', 'Hotel', 'Food', 'Recration'];	
+			for(var i=1; i<5; i++){              
+				document.write("<tr>");
+				if(i%2!=0){
+					for(var j=1; j<7; j++){
+						if(j%2!=0){
+							document.write('<td class="price_info1"><img class="table_image" src="test' + r + '.png" width="36" heigh="36" style="margin-left:10px;"></td>');     
+							r++;
+						}
+						else{
+							document.write('<td class="price_info2"><b style="margin-left:10px;">' + data[q] + '</b></td>');     
+							q++;
+						}
+					}
+				}
+				else{
+					for(var j=0; j<3; j++){
+						document.write('<td></td><td class="price"><span style="margin-left:10px;">' + price[w] + ' WON</span></td>');     
+						w++;
+					}
+				}
+			}	
+			</script>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table cellpadding="0" cellspacing="0" border="0" style="margin-bottom:50px;">
+  <tbody>
+    <tr>
+      <td width="500" style="font-size: 14px;" colspan="5">
+        <b style="color: #666; margin-left: 10px;">Course</b>
+      </td>
+    </tr>
+    <tr>
+      <td width="500" height="20" colspan="5"></td>
+    </tr>
+    <tr>			
+        <td width="478"  colspan="5" style="font-size:12px;text-align:left;color:#666;border:1px solid #eee	eee; padding:10px; background-color:#e5e5e5;">
+		<script>
+			var course = ['팔달산(Pal-Dal Mountin)', '칠보산(Chil-bo Mountin)', '서호 공원(Su-ho Park)', '숙지산(Suk-Ji Mountin)', '만석 공원(Man-Suk Park)'];
+			for(var i=0; i<5; i++){              
+				document.write('<span style="height:16px; line-height:16px; vertical-align:middle;"> ' + course[i] + ' </span>');
+				document.write('<span style="vertical-align:middle; display:inline-block; margin:0 5px;"><img width="4" height="8" border="0" style="vertical-align: middle;" src="2.png"></span>');
+			}
+		</script>
+      </td>
+    </tr>
+    <tr>
+      <td width="500" height="20" colspan="5"></td>
+    </tr>
+	<script>
+		var schedule = ['1. 팔달산(Pal-Dal Mountin)', '2. 칠보산(Chil-bo Mountin)', '3. 서호 공원(Su-ho Park)', '4. 숙지산(Suk-Ji Mountin)', '5. 만석 공원(Man-Suk Park)'];
+		var img = ['수원/수원 5/팔달산.png', '수원/수원 5/칠보산.png', '수원/수원 5/서호 공원.jpg', '수원/수원 5/숙지산.jpg', '수원/수원 5/만석 공원.jpg'];
+		var time = ['AM 09:00 -', 'AM 11:00 -', 'PM 13:00 -', 'PM 15:30 -', 'PM 17:00 -'];
+		var content = ['Location : Suwon Pal-Dal-gu Woo-Man-1dong',
+		               '',
+					   '',
+					   'Location : Suwon Pal-Dal-gu Hwa-Su-dong',
+					   'Location : Suwon Jang-An-gu Song-Juk-dong 434-2'];
+		var k = 0;
+		var r = 0;
+		var q = 0;
+		for(var i=0; i<5; i++){              
+			document.write('<tr>');
+			for(var j=0; j<4; j++){
+				if(j==0)
+				{
+					document.write('<td width="20" colspan="" style="vertical-align: bottom;"><img width="20" height="20" border="0" src="3.png"></td>');
+					document.write('<td width="480" height="20" colspan="3" style="vertical-align:top;"><span style="color:#999999;font-size:12px;line-height:20px;">' + time[k] + '</span></td></tr>');
+					k++;
+				}
+				else if(j==1)
+				{
+					document.write('<td width="10" style="border-right:1px solid #eee;"></td><td width="9"></td>');
+					document.write('<td colspan="3" height="30"><span style="overflow: hidden; text-overflow:ellipsis; width:100%; font-size:14px; color:#666666; line-height:18px; display:inline-block; margin-bottom:5px;">' + schedule[q] + '</span></td></tr>');
+					q++;
+				}
+				else if(j==2)
+				{
+					document.write('<td width="10" style="border-right:1px solid #eee;"></td><td width="9"></td>');
+					document.write('<td width="190" height="110" style="vertical-align: top;"><img width="183" height="110" border="0" src="' + img[r] + '" border="0"></td>');
+					document.write('<td width="280" style="font-size: 12px; vertical-align: top;color:#666;line-height: 18px;"><p style="margin-bottom:5px;"><b style="color:#666666;">memo</b><br><span style="color:#999999;">' + content[r] + '</span></p></td></tr>');
+					r++;
+				}
+				else
+					document.write('<td width="10" style="border-right:1px solid #eee;"></td><td width="489" height="20" colspan="4"></td></tr>');
+			}
+		}
+		</script>
+  </tbody>
+</table>
+<div id="map8"></div>
+	<div id="temperatue"></div>
+	<script>
+			var chart = c3.generate({
+		 data: {
+                x: 'x',
+                columns: [
+                    ['x', '06/17', '06/18', '06/19', '06/20', '06/21', '06/22', '06/23'],
+                    ['Highest Temperature', 26, 26, 27, 28, 27, 26, 26],
+                    ['Lowest Temperature', 16, 18, 18, 18, 17, 17, 16]
+                ]
+            },
+            axis: {
+                x: {
+                    type: 'category'
+                }
+            }
+        });
+	</script>
+	<div id="like"></div>
+	<script>
+			var chart = c3.generate({
+		 data: {
+                columns: [
+                    ["10's", 4],
+                    ["20's", 6],
+                    ["30's", 40],
+					["40's", 50]
+                ],
+				type: 'pie'
+            }
+        });
+	</script>
+	</div>
+			<div class="info" id="Hangdong town" style="display:none;">
+  <table cellpadding="0" cellspacing="0" border="0" style="margin-bottom:50px;">
+  <tbody>
+    <tr>
+      <td colspan="2" height="50" width="500" style="font-size:18px;vertical-align:middle;"><strong>Suwon</strong></td>
+    </tr>
+    <tr>
+      <td colspan="2" height="200" width="500" ><img src="수원/수원 4/연무대.jpg" width="500" height="200" border="1" alt="" style="vertical-align:top;"></td>
+    </tr>
+    <tr>
+      <td colspan="2" height="20"></td>
+    </tr>
+    <tr style="background-color:#e5e5e5;">
+      <td style="font-size:14px; border-top:1px solid #dddddd; padding-left:10px;" width="240" height="30"><strong>Travel Budget</strong></td>
+      <td width="240" style="font-size:12px; text-align:right; border-top:1px solid #dddddd; padding-right:10px;"><span><p id="sum8">KRW 0</p></span></td>
+	  <script>
+		var price = [50000, 15600, 0, 60000, 25000, 0];
+		var total=0; 
+		for(var i=0; i<6; i++){
+			total+=price[i];
+		}		
+		document.getElementById('sum8').innerHTML="KRW " + total;
+	  </script>
+    </tr>
+    <tr>
+     <td colspan="2" height="5"></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="500">
+        <table cellpadding="0" cellspacing="0" style="font-size:12px;color:#999999; background-color:white">
+			<script>
+			var r=1;
+			var w=0;
+			var q=0;
+			var total=0;
+			var price = [50000, 15600, 0, 60000, 25000, 0];
+			var data = ['Shopping', 'Traffic', 'Ticket', 'Hotel', 'Food', 'Recration'];	
+			for(var i=1; i<5; i++){              
+				document.write("<tr>");
+				if(i%2!=0){
+					for(var j=1; j<7; j++){
+						if(j%2!=0){
+							document.write('<td class="price_info1"><img class="table_image" src="test' + r + '.png" width="36" heigh="36" style="margin-left:10px;"></td>');     
+							r++;
+						}
+						else{
+							document.write('<td class="price_info2"><b style="margin-left:10px;">' + data[q] + '</b></td>');     
+							q++;
+						}
+					}
+				}
+				else{
+					for(var j=0; j<3; j++){
+						document.write('<td></td><td class="price"><span style="margin-left:10px;">' + price[w] + ' WON</span></td>');     
+						w++;
+					}
+				}
+			}	
+			</script>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table cellpadding="0" cellspacing="0" border="0" style="margin-bottom:50px;">
+  <tbody>
+    <tr>
+      <td width="500" style="font-size: 14px;" colspan="5">
+        <b style="color: #666; margin-left: 10px;">Course</b>
+      </td>
+    </tr>
+    <tr>
+      <td width="500" height="20" colspan="5"></td>
+    </tr>
+    <tr>			
+        <td width="478"  colspan="5" style="font-size:12px;text-align:left;color:#666;border:1px solid #eee	eee; padding:10px; background-color:#e5e5e5;">
+		<script>
+			var course = ['광교산(Gyang-Gyo Mountin)', '연무대(Yeon-Mu-Dae)', '수원 월드컵 경기장(Suwon WorldCup Stardium)', '광교 호수 공원(Gyang-Gyo Lake Park)'];
+			for(var i=0; i<4; i++){              
+				document.write('<span style="height:16px; line-height:16px; vertical-align:middle;"> ' + course[i] + ' </span>');
+				document.write('<span style="vertical-align:middle; display:inline-block; margin:0 5px;"><img width="4" height="8" border="0" style="vertical-align: middle;" src="2.png"></span>');
+			}
+		</script>
+      </td>
+    </tr>
+    <tr>
+      <td width="500" height="20" colspan="5"></td>
+    </tr>
+	<script>
+		var schedule = ['1. 광교산(Gyang-Gyo Mountin)', '2. 연무대(Yeon-Mu-Dae)', '3. 수원 월드컵 경기장(Suwon WorldCup Stardium)', '4. 광교 호수 공원(Gyang-Gyo Lake Park)'];
+		var img = ['수원/수원 4/광교산.png', '수원/수원 4/연무대.jpg', '수원/수원 4/수원월드컵경기장.jpg', '수원/수원 4/광교 호수 공원.jpg'];
+		var time = ['AM 09:00 -', 'AM 12:00 -', 'PM 14:00 -', 'PM 16:30 -'];
+		var content = ['Location : Yong-In Su-Ji-gu Go-Gi-dong Mountin58-1<br>Tel : 031-324-8373',
+		               '',
+					   'Time : Weekday 09:00 - 18:00<br>Location : Suwon Pal-Dal-gu WorldCup-ro 310<br>Tel : 031-202-2002',
+					   'Location : Suwon Young-Tong-gu Gyang-Gyo Lake-ro 57<br>Tel : 070-8800-2460'];
+		var k = 0;
+		var r = 0;
+		var q = 0;
+		for(var i=0; i<5; i++){              
+			document.write('<tr>');
+			for(var j=0; j<4; j++){
+				if(j==0)
+				{
+					document.write('<td width="20" colspan="" style="vertical-align: bottom;"><img width="20" height="20" border="0" src="3.png"></td>');
+					document.write('<td width="480" height="20" colspan="3" style="vertical-align:top;"><span style="color:#999999;font-size:12px;line-height:20px;">' + time[k] + '</span></td></tr>');
+					k++;
+				}
+				else if(j==1)
+				{
+					document.write('<td width="10" style="border-right:1px solid #eee;"></td><td width="9"></td>');
+					document.write('<td colspan="3" height="30"><span style="overflow: hidden; text-overflow:ellipsis; width:100%; font-size:14px; color:#666666; line-height:18px; display:inline-block; margin-bottom:5px;">' + schedule[q] + '</span></td></tr>');
+					q++;
+				}
+				else if(j==2)
+				{
+					document.write('<td width="10" style="border-right:1px solid #eee;"></td><td width="9"></td>');
+					document.write('<td width="190" height="110" style="vertical-align: top;"><img width="183" height="110" border="0" src="' + img[r] + '" border="0"></td>');
+					document.write('<td width="280" style="font-size: 12px; vertical-align: top;color:#666;line-height: 18px;"><p style="margin-bottom:5px;"><b style="color:#666666;">memo</b><br><span style="color:#999999;">' + content[r] + '</span></p></td></tr>');
+					r++;
+				}
+				else
+					document.write('<td width="10" style="border-right:1px solid #eee;"></td><td width="489" height="20" colspan="4"></td></tr>');
+			}
+		}
+		</script>
+  </tbody>
+</table>
+<div id="map9"></div>
+	<div id="temperatue"></div>
+	<script>
+			var chart = c3.generate({
+		 data: {
+                x: 'x',
+                columns: [
+                    ['x', '06/17', '06/18', '06/19', '06/20', '06/21', '06/22', '06/23'],
+                    ['Highest Temperature', 26, 26, 27, 28, 27, 26, 26],
+                    ['Lowest Temperature', 16, 18, 18, 18, 17, 17, 16]
+                ]
+            },
+            axis: {
+                x: {
+                    type: 'category'
+                }
+            }
+        });
+	</script>
+	<div id="like"></div>
+	<script>
+			var chart = c3.generate({
+		 data: {
+                columns: [
+                    ["10's", 15],
+                    ["20's", 15],
+                    ["30's", 40],
+					["40's", 30]
+                ],
+				type: 'pie'
+            }
+        });
+	</script>
+	</div>
+			<div class="info" id="Suho" style="display:none;">
+  <table cellpadding="0" cellspacing="0" border="0" style="margin-bottom:50px;">
+  <tbody>
+    <tr>
+      <td colspan="2" height="50" width="500" style="font-size:18px;vertical-align:middle;"><strong>Suwon</strong></td>
+    </tr>
+    <tr>
+      <td colspan="2" height="200" width="500" ><img src="수원/수원 3/방화 수류정.jpg" width="500" height="200" border="1" alt="" style="vertical-align:top;"></td>
+    </tr>
+    <tr>
+      <td colspan="2" height="20"></td>
+    </tr>
+    <tr style="background-color:#e5e5e5;">
+      <td style="font-size:14px; border-top:1px solid #dddddd; padding-left:10px;" width="240" height="30"><strong>Travel Budget</strong></td>
+      <td width="240" style="font-size:12px; text-align:right; border-top:1px solid #dddddd; padding-right:10px;"><span><p id="sum9">KRW 0</p></span></td>
+	  <script>
+		var price = [40000, 13000, 18000, 60000, 35000, 20000];
+		var total=0; 
+		for(var i=0; i<6; i++){
+			total+=price[i];
+		}		
+		document.getElementById('sum9').innerHTML="KRW " + total;
+	  </script>
+    </tr>
+    <tr>
+     <td colspan="2" height="5"></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="500">
+        <table cellpadding="0" cellspacing="0" style="font-size:12px;color:#999999; background-color:white">
+			<script>
+			var r=1;
+			var w=0;
+			var q=0;
+			var total=0;
+			var price = [40000, 13000, 18000, 60000, 35000, 20000];
+			var data = ['Shopping', 'Traffic', 'Ticket', 'Hotel', 'Food', 'Recration'];	
+			for(var i=1; i<5; i++){              
+				document.write("<tr>");
+				if(i%2!=0){
+					for(var j=1; j<7; j++){
+						if(j%2!=0){
+							document.write('<td class="price_info1"><img class="table_image" src="test' + r + '.png" width="36" heigh="36" style="margin-left:10px;"></td>');     
+							r++;
+						}
+						else{
+							document.write('<td class="price_info2"><b style="margin-left:10px;">' + data[q] + '</b></td>');     
+							q++;
+						}
+					}
+				}
+				else{
+					for(var j=0; j<3; j++){
+						document.write('<td></td><td class="price"><span style="margin-left:10px;">' + price[w] + ' WON</span></td>');     
+						w++;
+					}
+				}
+			}	
+			</script>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table cellpadding="0" cellspacing="0" border="0" style="margin-bottom:50px;">
+  <tbody>
+    <tr>
+      <td width="500" style="font-size: 14px;" colspan="5">
+        <b style="color: #666; margin-left: 10px;">Course</b>
+      </td>
+    </tr>
+    <tr>
+      <td width="500" height="20" colspan="5"></td>
+    </tr>
+    <tr>			
+        <td width="478"  colspan="5" style="font-size:12px;text-align:left;color:#666;border:1px solid #eee	eee; padding:10px; background-color:#e5e5e5;">
+		<script>
+			var course = ['월화원(Wor-Hwa-Won)', '플라잉 수원(Flying Suwon)', '방화 수류정(Bang-Hwa Su-Ryu-Jung)', '고가 커피(Go-Ga Coffee)', '서장대(SU-Jang-dae)'];
+			for(var i=0; i<5; i++){              
+				document.write('<span style="height:16px; line-height:16px; vertical-align:middle;"> ' + course[i] + ' </span>');
+				document.write('<span style="vertical-align:middle; display:inline-block; margin:0 5px;"><img width="4" height="8" border="0" style="vertical-align: middle;" src="2.png"></span>');
+			}
+		</script>
+      </td>
+    </tr>
+    <tr>
+      <td width="500" height="20" colspan="5"></td>
+    </tr>
+	<script>
+		var schedule = ['1. 월화원(Wor-Hwa-Won)', '2. 플라잉 수원(Flying Suwon)', '3. 방화 수류정(Bang-Hwa Su-Ryu-Jung)', '4. 고가 커피(Go-Ga Coffee)', '5. 서장대(SU-Jang-dae)'];
+		var img = ['수원/수원 3/월화원.jpg', '수원/수원 3/플라잉 수원.jpg', '수원/수원 3/방화 수류정.jpg', '수원/수원 3/고가 커피.jpg', '수원/수원 3/서장대.jpg'];
+		var time = ['AM 09:00 -', 'AM 11:00 -', 'PM 13:00 -', 'PM 15:30 -', 'PM 17:00 -'];
+		var content = ['Time : 09:00 - 22:00<br>Location : Suwon Pal-Dal-gu Dong-Suwon-ro 399<br>Tel : 031-22288-4192',
+		               '',
+					   'Location : Suwon Pal-Dal-gu Suwon-Chun-ro392road 44-6<br>Tel : 031-290-3600',
+					   'Time : Everyday 10:00 - 22:00<br>Hot Menu : Americano 3,000 Won<br>Location : Suwon Pal-Dal-gu Hwa-Su-moon-ro 32<br>Tel : 031-8081-2888',
+					   ''];
+		var k = 0;
+		var r = 0;
+		var q = 0;
+		for(var i=0; i<5; i++){              
+			document.write('<tr>');
+			for(var j=0; j<4; j++){
+				if(j==0)
+				{
+					document.write('<td width="20" colspan="" style="vertical-align: bottom;"><img width="20" height="20" border="0" src="3.png"></td>');
+					document.write('<td width="480" height="20" colspan="3" style="vertical-align:top;"><span style="color:#999999;font-size:12px;line-height:20px;">' + time[k] + '</span></td></tr>');
+					k++;
+				}
+				else if(j==1)
+				{
+					document.write('<td width="10" style="border-right:1px solid #eee;"></td><td width="9"></td>');
+					document.write('<td colspan="3" height="30"><span style="overflow: hidden; text-overflow:ellipsis; width:100%; font-size:14px; color:#666666; line-height:18px; display:inline-block; margin-bottom:5px;">' + schedule[q] + '</span></td></tr>');
+					q++;
+				}
+				else if(j==2)
+				{
+					document.write('<td width="10" style="border-right:1px solid #eee;"></td><td width="9"></td>');
+					document.write('<td width="190" height="110" style="vertical-align: top;"><img width="183" height="110" border="0" src="' + img[r] + '" border="0"></td>');
+					document.write('<td width="280" style="font-size: 12px; vertical-align: top;color:#666;line-height: 18px;"><p style="margin-bottom:5px;"><b style="color:#666666;">memo</b><br><span style="color:#999999;">' + content[r] + '</span></p></td></tr>');
+					r++;
+				}
+				else
+					document.write('<td width="10" style="border-right:1px solid #eee;"></td><td width="489" height="20" colspan="4"></td></tr>');
+			}
+		}
+		</script>
+  </tbody>
+</table>
+<div id="map10"></div>
+	<div id="temperatue"></div>
+	<script>
+			var chart = c3.generate({
+		 data: {
+                x: 'x',
+                columns: [
+                    ['x', '06/17', '06/18', '06/19', '06/20', '06/21', '06/22', '06/23'],
+                    ['Highest Temperature', 26, 26, 27, 28, 27, 26, 26],
+                    ['Lowest Temperature', 16, 18, 18, 18, 17, 17, 16]
+                ]
+            },
+            axis: {
+                x: {
+                    type: 'category'
+                }
+            }
+        });
+	</script>
+	<div id="like"></div>
+	<script>
+			var chart = c3.generate({
+		 data: {
+                columns: [
+                    ["10's", 30],
+                    ["20's", 35],
+                    ["30's", 30],
+					["40's", 5]
+                ],
+				type: 'pie'
+            }
+        });
+	</script>
+	</div>
+		<div class="info" id="Bangwha" style="display:none;">
+  <table cellpadding="0" cellspacing="0" border="0" style="margin-bottom:50px;">
+  <tbody>
+    <tr>
+      <td colspan="2" height="50" width="500" style="font-size:18px;vertical-align:middle;"><strong>Suwon</strong></td>
+    </tr>
+    <tr>
+      <td colspan="2" height="200" width="500" ><img src="수원/수원 2/팔달문.jpg" width="500" height="200" border="1" alt="" style="vertical-align:top;"></td>
+    </tr>
+    <tr>
+      <td colspan="2" height="20"></td>
+    </tr>
+    <tr style="background-color:#e5e5e5;">
+      <td style="font-size:14px; border-top:1px solid #dddddd; padding-left:10px;" width="240" height="30"><strong>Travel Budget</strong></td>
+      <td width="240" style="font-size:12px; text-align:right; border-top:1px solid #dddddd; padding-right:10px;"><span><p id="sum10">KRW 0</p></span></td>
+	  <script>
+		var price = [80000, 15600, 1500, 60000, 45000, 20000];
+		var total=0; 
+		for(var i=0; i<6; i++){
+			total+=price[i];
+		}		
+		document.getElementById('sum10').innerHTML="KRW " + total;
+	  </script>
+    </tr>
+    <tr>
+     <td colspan="2" height="5"></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="500">
+        <table cellpadding="0" cellspacing="0" style="font-size:12px;color:#999999; background-color:white">
+			<script>
+			var r=1;
+			var w=0;
+			var q=0;
+			var total=0;
+			var price = [80000, 15600, 1500, 60000, 45000, 20000];
+			var data = ['Shopping', 'Traffic', 'Ticket', 'Hotel', 'Food', 'Recration'];	
+			for(var i=1; i<5; i++){              
+				document.write("<tr>");
+				if(i%2!=0){
+					for(var j=1; j<7; j++){
+						if(j%2!=0){
+							document.write('<td class="price_info1"><img class="table_image" src="test' + r + '.png" width="36" heigh="36" style="margin-left:10px;"></td>');     
+							r++;
+						}
+						else{
+							document.write('<td class="price_info2"><b style="margin-left:10px;">' + data[q] + '</b></td>');     
+							q++;
+						}
+					}
+				}
+				else{
+					for(var j=0; j<3; j++){
+						document.write('<td></td><td class="price"><span style="margin-left:10px;">' + price[w] + ' WON</span></td>');     
+						w++;
+					}
+				}
+			}	
+			</script>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table cellpadding="0" cellspacing="0" border="0" style="margin-bottom:50px;">
+  <tbody>
+    <tr>
+      <td width="500" style="font-size: 14px;" colspan="5">
+        <b style="color: #666; margin-left: 10px;">Course</b>
+      </td>
+    </tr>
+    <tr>
+      <td width="500" height="20" colspan="5"></td>
+    </tr>
+    <tr>			
+        <td width="478"  colspan="5" style="font-size:12px;text-align:left;color:#666;border:1px solid #eee	eee; padding:10px; background-color:#e5e5e5;">
+		<script>
+			var course = ['지동 시장(Ji-Dong Market)', '화성행궁(Hwa-Cathle Hang-Gung)', '화성 산책(Hwa Cathle Walk)', '수원 제일 교회 노을빛 전망대(Suwon-Jeail Church Noel-Light View-Spot)', '통닭 골목(Chicken Street)', '팔달문(Pal-Dal Door)'];
+			for(var i=0; i<6; i++){              
+				document.write('<span style="height:16px; line-height:16px; vertical-align:middle;"> ' + course[i] + ' </span>');
+				document.write('<span style="vertical-align:middle; display:inline-block; margin:0 5px;"><img width="4" height="8" border="0" style="vertical-align: middle;" src="2.png"></span>');
+		</script>
+      </td>
+    </tr>
+    <tr>
+      <td width="500" height="20" colspan="5"></td>
+    </tr>
+	<script>
+		var schedule = ['1. 지동 시장(Ji-Dong Market)', '2. 화성행궁(Hwa-Cathle Hang-Gung)', '3. 화성 산책(Hwa Cathle Walk)', '4. 수원 제일 교회 노을빛 전망대(Suwon-Jeail Church Noel-Light View-Spot)', '5. 통닭 골목(Chicken Street)', '6. 팔달문(Pal-Dal Door)'];
+		var img = ['수원/수원 2/지동 시장.jpg', '수원/수원 2/화성 행궁.jpg', '수원/수원 2/화성 산책.jpg', '수원/수원 2/노을빛 전망대.jpg', '수원/수원 2/통닭 골목.jpg', '수원/수원 2/팔달문.jpg'];
+		var time = ['AM 09:00 -', 'AM 10:30 -', 'PM 14:00 -', 'PM 15:30 -', 'PM 17:00 -', 'PM 19:00 -'];
+		var content = ['Location : Suwon Pal-Dal-gu Pal-Dal-Moon-ro 19<br>Tel : 031-256-0202',
+		               'Time : Everyday 09:00 - 18:00<br>Ticket : Adult 1,500 Won<br>Location : Suwon Pal-Dal-gu Gung-Jo-ro 825<br>Tel : 031-290-3600',
+					   '',
+					   '',
+					   '',
+					   'Location : Suwon Pal-Dal-gu Gung-Jo-ro 780<br>Tel : 031-228-2765'];
+		var k = 0;
+		var r = 0;
+		var q = 0;
+		for(var i=0; i<6; i++){              
+			document.write('<tr>');
+			for(var j=0; j<4; j++){
+				if(j==0)
+				{
+					document.write('<td width="20" colspan="" style="vertical-align: bottom;"><img width="20" height="20" border="0" src="3.png"></td>');
+					document.write('<td width="480" height="20" colspan="3" style="vertical-align:top;"><span style="color:#999999;font-size:12px;line-height:20px;">' + time[k] + '</span></td></tr>');
+					k++;
+				}
+				else if(j==1)
+				{
+					document.write('<td width="10" style="border-right:1px solid #eee;"></td><td width="9"></td>');
+					document.write('<td colspan="3" height="30"><span style="overflow: hidden; text-overflow:ellipsis; width:100%; font-size:14px; color:#666666; line-height:18px; display:inline-block; margin-bottom:5px;">' + schedule[q] + '</span></td></tr>');
+					q++;
+				}
+				else if(j==2)
+				{
+					document.write('<td width="10" style="border-right:1px solid #eee;"></td><td width="9"></td>');
+					document.write('<td width="190" height="110" style="vertical-align: top;"><img width="183" height="110" border="0" src="' + img[r] + '" border="0"></td>');
+					document.write('<td width="280" style="font-size: 12px; vertical-align: top;color:#666;line-height: 18px;"><p style="margin-bottom:5px;"><b style="color:#666666;">memo</b><br><span style="color:#999999;">' + content[r] + '</span></p></td></tr>');
+					r++;
+				}
+				else
+					document.write('<td width="10" style="border-right:1px solid #eee;"></td><td width="489" height="20" colspan="4"></td></tr>');
+			}
+		}
+		</script>
+  </tbody>
+</table>
+<div id="map11"></div>
+	<div id="temperatue"></div>
+	<script>
+			var chart = c3.generate({
+		 data: {
+                x: 'x',
+                columns: [
+                    ['x', '06/17', '06/18', '06/19', '06/20', '06/21', '06/22', '06/23'],
+                    ['Highest Temperature', 26, 26, 27, 28, 27, 26, 26],
+                    ['Lowest Temperature', 16, 18, 18, 18, 17, 17, 16]
+                ]
+            },
+            axis: {
+                x: {
+                    type: 'category'
+                }
+            }
+        });
+	</script>
+	<div id="like"></div>
+	<script>
+			var chart = c3.generate({
+		 data: {
+                columns: [
+                    ["10's", 20],
+                    ["20's", 30],
+                    ["30's", 30],
+					["40's", 20]
+                ],
+				type: 'pie'
+            }
+        });
+	</script>
+	</div>
+<div class="info" id="Chungyunlu" style="display:none;">
+  <table cellpadding="0" cellspacing="0" border="0" style="margin-bottom:50px;">
+  <tbody>
+    <tr>
+      <td colspan="2" height="50" width="500" style="font-size:18px;vertical-align:middle;"><strong>Jeonju</strong></td>
+    </tr>
+    <tr>
+      <td colspan="2" height="200" width="500" ><img src="전주/전주 1/전동 성당.jpg" width="500" height="200" border="1" alt="" style="vertical-align:top;"></td>
+    </tr>
+    <tr>
+      <td colspan="2" height="20"></td>
+    </tr>
+    <tr style="background-color:#e5e5e5;">
+      <td style="font-size:14px; border-top:1px solid #dddddd; padding-left:10px;" width="240" height="30"><strong>Travel Budget</strong></td>
+      <td width="240" style="font-size:12px; text-align:right; border-top:1px solid #dddddd; padding-right:10px;"><span><p id="sum11">KRW 0</p></span></td>
+	  <script>
+		var price = [30000, 7800, 3000, 60000, 40000, 15000];
+		var total=0; 
+		for(var i=0; i<6; i++){
+			total+=price[i];
+		}		
+		document.getElementById('sum11').innerHTML="KRW " + total;
+	  </script>
+    </tr>
+    <tr>
+     <td colspan="2" height="5"></td>
+    </tr>
+    <tr>
+      <td colspan="2" width="500">
+        <table cellpadding="0" cellspacing="0" style="font-size:12px;color:#999999; background-color:white">
+			<script>
+			var r=1;
+			var w=0;
+			var q=0;
+			var total=0;
+			var price = [30000, 7800, 3000, 60000, 40000, 15000];
+			var data = ['Shopping', 'Traffic', 'Ticket', 'Hotel', 'Food', 'Recration'];	
+			for(var i=1; i<5; i++){              
+				document.write("<tr>");
+				if(i%2!=0){
+					for(var j=1; j<7; j++){
+						if(j%2!=0){
+							document.write('<td class="price_info1"><img class="table_image" src="test' + r + '.png" width="36" heigh="36" style="margin-left:10px;"></td>');     
+							r++;
+						}
+						else{
+							document.write('<td class="price_info2"><b style="margin-left:10px;">' + data[q] + '</b></td>');     
+							q++;
+						}
+					}
+				}
+				else{
+					for(var j=0; j<3; j++){
+						document.write('<td></td><td class="price"><span style="margin-left:10px;">' + price[w] + ' WON</span></td>');     
+						w++;
+					}
+				}
+			}	
+			</script>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table cellpadding="0" cellspacing="0" border="0" style="margin-bottom:50px;">
+  <tbody>
+    <tr>
+      <td width="500" style="font-size: 14px;" colspan="5">
+        <b style="color: #666; margin-left: 10px;">Course</b>
+      </td>
+    </tr>
+    <tr>
+      <td width="500" height="20" colspan="5"></td>
+    </tr>
+    <tr>			
+        <td width="478"  colspan="5" style="font-size:12px;text-align:left;color:#666;border:1px solid #eee	eee; padding:10px; background-color:#e5e5e5;">
+		<script>
+			var course = ['전주 한옥 마을(Jeonju Korean-House-Town)', '경기전(Kyung-ki-jeon)', '전동 성당(Jeon-Dong Church)', '덕진 공원(Duk-Jin Park)', '남부 시장(Nam-Boo Market)'];
+			for(var i=0; i<5; i++){              
+				document.write('<span style="height:16px; line-height:16px; vertical-align:middle;"> ' + course[i] + ' </span>');
+				document.write('<span style="vertical-align:middle; display:inline-block; margin:0 5px;"><img width="4" height="8" border="0" style="vertical-align: middle;" src="2.png"></span>');
+			}
+		</script>
+      </td>
+    </tr>
+    <tr>
+      <td width="500" height="20" colspan="5"></td>
+    </tr>
+	<script>
+		var schedule = ['1. 전주 한옥 마을(Jeonju Korean-House-Town)', '2. 경기전(Kyung-ki-jeon)', '3. 전동 성당(Jeon-Dong Church)', '4. 덕진 공원(Duk-Jin Park)', '5. 남부 시장(Nam-Boo Market)'];
+		var img = ['전주/전주 1/전주 한옥 마을.jpg', '전주/전주 1/경기전.jpg', '전주/전주 1/전동 성당.jpg', '전주/전주 1/덕진 공원.jpg', '전주/전주 1/남부시장 야시장.jpg'];
+		var time = ['AM 09:00 -', 'AM 11:00 -', 'PM 13:00 -', 'PM 15:30 -', 'PM 17:00 -'];
+		var content = ['Time : Everyday 00:00 - 24:00<br>Ticket : Free<br>Location : Jeonju Wan-San-gu Kyo-dong<br>Tel : 063-282-1330',
+		               '',
+					   'Location : Jeonju Wan-San-gu Tea-Jo-ro 51<br>Tel : 063-284-3222',
+					   'Time : Everyday 00:00 - 24:00<br>Location : Jeonju Duk-Jin-gu Duk-Jin-dong1ga 1314-4<br>Tel : 063-239-2607',
+					   ''];
+		var k = 0;
+		var r = 0;
+		var q = 0;
+		for(var i=0; i<5; i++){              
+			document.write('<tr>');
+			for(var j=0; j<4; j++){
+				if(j==0)
+				{
+					document.write('<td width="20" colspan="" style="vertical-align: bottom;"><img width="20" height="20" border="0" src="3.png"></td>');
+					document.write('<td width="480" height="20" colspan="3" style="vertical-align:top;"><span style="color:#999999;font-size:12px;line-height:20px;">' + time[k] + '</span></td></tr>');
+					k++;
+				}
+				else if(j==1)
+				{
+					document.write('<td width="10" style="border-right:1px solid #eee;"></td><td width="9"></td>');
+					document.write('<td colspan="3" height="30"><span style="overflow: hidden; text-overflow:ellipsis; width:100%; font-size:14px; color:#666666; line-height:18px; display:inline-block; margin-bottom:5px;">' + schedule[q] + '</span></td></tr>');
+					q++;
+				}
+				else if(j==2)
+				{
+					document.write('<td width="10" style="border-right:1px solid #eee;"></td><td width="9"></td>');
+					document.write('<td width="190" height="110" style="vertical-align: top;"><img width="183" height="110" border="0" src="' + img[r] + '" border="0"></td>');
+					document.write('<td width="280" style="font-size: 12px; vertical-align: top;color:#666;line-height: 18px;"><p style="margin-bottom:5px;"><b style="color:#666666;">memo</b><br><span style="color:#999999;">' + content[r] + '</span></p></td></tr>');
+					r++;
+				}
+				else
+					document.write('<td width="10" style="border-right:1px solid #eee;"></td><td width="489" height="20" colspan="4"></td></tr>');
+			}
+		}
+		</script>
+  </tbody>
+</table>
+<div id="map12"></div>
+	<div id="temperatue"></div>
+	<script>
+			var chart = c3.generate({
+			bindto = "#temperatue",
+		 data: {
+                x: 'x',
+                columns: [
+                    ['x', '06/17', '06/18', '06/19', '06/20', '06/21', '06/22', '06/23'],
+                    ['Highest Temperature', 26, 27, 28, 28, 28, 26, 24],
+                    ['Lowest Temperature', 15, 17, 16, 17, 17, 16, 16]
+                ]
+            },
+            axis: {
+                x: {
+                    type: 'category'
+                }
+            }
+        });
+	</script>
+	<div id="like"></div>
+	<script>
+			var chart = c3.generate({
+			bindto = "#like",
+		 data: {
+                columns: [
+                    ["10's", 20],
+                    ["20's", 30],
+                    ["30's", 25],
+					["40's", 25]
+                ],
+				type: 'pie'
+            }
+        });
+	</script>
+	</div>
+	</div>
+
+
+	<!-- Footer -->
+	<footer class="text-center">
+	<a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+		<span class="glyphicon glyphicon-chevron-up"></span>
+	</a><br><br>
+	<p>Triporea</p> 
+	</footer>
+
+	<script>
+		$(document).ready(function(){
+		// Initialize Tooltip
+		$('[data-toggle="tooltip"]').tooltip(); 
+  
+		// Add smooth scrolling to all links in navbar + footer link
+		$(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+		// Make sure this.hash has a value before overriding default behavior
+		if (this.hash !== "") {
+
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBAlOjojzJqN5CEy7iGWtTTiWgCMiPUhXI&callback=myMap"></script>
+
+</body>
+</html>

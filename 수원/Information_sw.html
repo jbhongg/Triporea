@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Information</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="/SRC2/selectcheckbox/fSelect.css" rel="stylesheet" type="text/css">
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="tabcontent.js" type="text/javascript"></script>
+    <link href="template1/tabcontent.css" rel="stylesheet" type="text/css" />
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.6.9/c3.min.css" rel="stylesheet" type="text/css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js" charset="utf-8"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.6.9/c3.min.js"></script>
+</head>
+<body style="background:#F6F9FC; font-family:Arial;">
+    <div style="width: 500px; margin: 0 auto; padding: 120px 0 40px;">
+        <ul class="tabs" data-persist="true">
+            <li><a href="#view1">Suwon</a></li>
+            <li><a href="#view2">Exchange Rate</a></li>
+            <li><a href="#view3">Others</a></li>
+        </ul>
+        <div class="tabcontents">
+            <div id="view1">
+                <b><img src = "SW_E.jpg"></b>
+                <p>A city in the south-central part of Gyeonggi-do As the Gyeongbu railway passes, a subway is connected to Seoul. With the recent construction of a large factory, the country is developing from an agricultural city to an industrial city. There are famous places like Seoho, Paldalmun, and Hwahhongmun. It is the location of eavesdropping in Gyeonggi Province. The area is 121.05km2.</p><br>
+            </div>
+            <div id="view2">
+                <b>Exchange rate</b>
+                <div class="country_inner_box">
+						<div class="country_info_box_title">
+							환율 계산						</div>
+						<div class="exchange_box e1">
+							<div class="exchange_left">
+								<b>
+								<div class="container">
+				<select class="demo" multiple="multiple">
+					<optgroup label="Country">
+						<option value="America">USD</option>
+						<option value="Japan">JPY</option>
+						<option value="China">CNY</option>
+						<option value="England">GBP</option>
+						<option value="Denmark">DKK</option>
+						<option value="Russia">RUB</option>
+						<option value="Maxico">MXN</option>
+						<option value="Australia">AUD</option>
+					</optgroup>
+				</select>
+				<script src="/SRC2/selectcheckbox/fSelect.js"></script>
+								</b>
+							</div>
+							<input type="text" class="exchange_input" data-no="1" value="100" />
+						</div>
+						<div class="exchange_center">=</div>
+						<div class="exchange_box e2">
+							<div class="exchange_left">
+																	<b>대한민국</b><br>
+									<span>KRW</span>
+															</div>
+							<input type="text" class="exchange_input" data-no="2" value="1" />
+						</div>
+						<div class="clear"></div>
+					</div>
+                               
+            </div>
+		</div>
+            <div id="view3">
+                 <h2> Suwon Trip Preference </h2>
+					   <div id="like"></div>
+							<script>
+						var chart = c3.generate({
+						bindto: "#like",
+						data: {
+									columns: [
+										["Couple", 25],
+										["Family", 20],
+										["Alone", 10],
+										["With Friends", 40],
+										["etc", 5],
+				
+									],
+									type: 'pie'
+								}
+							});
+					</script>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+			
+
+</html>		

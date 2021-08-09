@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Information</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="/SRC2/selectcheckbox/fSelect.css" rel="stylesheet" type="text/css">
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="tabcontent.js" type="text/javascript"></script>
+    <link href="template1/tabcontent.css" rel="stylesheet" type="text/css" />
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.6.9/c3.min.css" rel="stylesheet" type="text/css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js" charset="utf-8"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.6.9/c3.min.js"></script>
+</head>
+<body style="background:#F6F9FC; font-family:Arial;">
+    <div style="width: 500px; margin: 0 auto; padding: 120px 0 40px;">
+        <ul class="tabs" data-persist="true">
+            <li><a href="#view1">JeJu</a></li>
+            <li><a href="#view2">Exchange Rate</a></li>
+            <li><a href="#view3">Others</a></li>
+        </ul>
+        <div class="tabcontents">
+            <div id="view1">
+                <b><img src = "JJ_E.jpg"> </b>
+                <p>An island in the southwestern part of the Republic of Korea.
+				The jurisdiction of Jeju Special Self-Governing Province, a metropolitan autonomous body in the administrative region.
+				It is the largest and most populous island of South Korea, with an area of 1,833.2 square kilometers and a population of about 660,000 people.
+				It is a volcanic island formed by volcanic activity. For this reason, there are 370 parasitic volcanoes (Oreum) in the center of the island,
+				which are 200m to 300m, and Hanon is one of them.
+				Once upon a time there was a country called Tamna.
+				Therefore, it was also called Tamdado because it is a name that refers to Jeju. It is also nicknamed the citrus soup.</p><br>
+            </div>
+            <div id="view2">
+                <b>Exchange rate</b>
+                <div class="country_inner_box">
+						<div class="country_info_box_title">
+							환율 계산						</div>
+						<div class="exchange_box e1">
+							<div class="exchange_left">
+								<b>
+								<div class="container">
+				<select class="demo" multiple="multiple">
+					<optgroup label="Country">
+						<option value="America">USD</option>
+						<option value="Japan">JPY</option>
+						<option value="China">CNY</option>
+						<option value="England">GBP</option>
+						<option value="Denmark">DKK</option>
+						<option value="Russia">RUB</option>
+						<option value="Maxico">MXN</option>
+						<option value="Australia">AUD</option>
+					</optgroup>
+				</select>
+				<script src="/SRC2/selectcheckbox/fSelect.js"></script>
+								</b>
+							</div>
+							<input type="text" class="exchange_input" data-no="1" value="100" />
+						</div>
+						<div class="exchange_center">=</div>
+						<div class="exchange_box e2">
+							<div class="exchange_left">
+																	<b>대한민국</b><br>
+									<span>KRW</span>
+															</div>
+							<input type="text" class="exchange_input" data-no="2" value="1" />
+						</div>
+						<div class="clear"></div>
+					</div>
+                               
+            </div>
+		</div>
+            <div id="view3">
+             <h2> Je-Ju Trip Preference </h2>
+					   <div id="like"></div>
+							<script>
+						var chart = c3.generate({
+						bindto: "#like",
+						data: {
+									columns: [
+										["Couple", 40],
+										["Family", 20],
+										["newly married couple", 10],
+										["With Friends", 25],
+										["etc", 5],
+				
+									],
+									type: 'pie'
+								}
+							});
+					</script>
+        </div>
+    </div>
+</body>
+</html>
+			
+			
+	
